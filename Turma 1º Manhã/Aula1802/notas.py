@@ -1,0 +1,1 @@
+# Crie um programa que pede 4 notas, calcula a soma dessas notas, calcula a média dessas notas e por fim exibe a média do aluno
