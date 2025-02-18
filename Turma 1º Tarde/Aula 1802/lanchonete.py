@@ -15,4 +15,14 @@ print('''
         105 | Refrigerante    | R$ 1,00
 ''')
 
-codigo = input("Digite o codigo:")
+codigo = input("Digite o codigo do produto:")
+
+if (codigo == "100"):
+    produto = "Cachorro Quente"
+    preco = 1.10
+elif (codigo == "101"):
+    produto = "Baurú Simples"
+    preco = 1.30
+else:
+    produto = "Produto Inválido"
+    preco = 0
