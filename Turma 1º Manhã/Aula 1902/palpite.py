@@ -4,4 +4,4 @@
 
 #Utilizando o loop for, permita que a pessoa tenha 3 tentativas
 
-#Se a pessoa errar, termine o loop mais cedo
+#Se a pessoa acertar, termine o loop mais cedo
