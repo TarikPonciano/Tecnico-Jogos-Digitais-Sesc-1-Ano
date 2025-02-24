@@ -3,16 +3,16 @@ import random
 
 print("Bem vindo à Loteria dos Sonhos!")
 bilhete = ""
-numeroSecreto = random.randint(1,60)
+numeroSecreto = random.randint(10,60)
 
 print("Escolha seus 6 números da sorte!")
 print()
 
 for i in range(6):
-    numeroDaSorte = random.randint(1,60)
+    numeroDaSorte = random.randint(10,60)
 
     if (str(numeroDaSorte) in bilhete):
-        numeroDaSorte = random.randint(1,60)
+        numeroDaSorte = random.randint(10,60)
 
     bilhete += " " + str(numeroDaSorte)
 
