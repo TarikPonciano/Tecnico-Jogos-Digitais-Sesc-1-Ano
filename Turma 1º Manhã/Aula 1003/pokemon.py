@@ -5,6 +5,7 @@
 # Faça com que a batalha dure até que um dos pokemons fique sem hp, então imprima o resultado na tela
 # Melhore a batalha para exibir cada turno da batalha, quanto de dano foi sofrido e o hp restante de cada pokemon
 import time
+import random
 
 nomeTreinador = ""
 nomePokemon = ""
@@ -12,6 +13,7 @@ tipoPokemon = ""
 poderPokemon = 0
 hpPokemon = 0
 atkPokemon = 0
+
 
 
 
@@ -70,7 +72,7 @@ print(f"Um {nomePokemonInimigo} selvagem apareceu!")
 turnos = 1
 while(hpPokemon > 0 and hpPokemonInimigo > 0):
     print()
-    print(f"###############Turno {turnos}###############")
+    print(f"############### Turno {turnos}###############")
     print()
 
     print(f"Turno do {nomePokemon}")
@@ -81,9 +83,13 @@ while(hpPokemon > 0 and hpPokemonInimigo > 0):
     turnos += 1
     print(f"{nomePokemonInimigo} foi atingido por um golpe de {nomePokemon}!")
     time.sleep(0.5)
-    print(f"{nomePokemonInimigo} sofreu {atkPokemon} de dano!")
+    danoPokemon = int(atkPokemon * (random.randint(50,120)/100.0))
+    if danoPokemon > atkPokemon:
+        print(f"{nomePokemonInimigo} sofreu um golpe crítico e tomou {danoPokemon} de dano!")
+    else:
+        print(f"{nomePokemonInimigo} sofreu {danoPokemon} de dano!")
     time.sleep(0.5)
-    hpPokemonInimigo -= atkPokemon
+    hpPokemonInimigo -= danoPokemon
     print(f"HP restante do {nomePokemonInimigo}: {hpPokemonInimigo}")
 
     time.sleep(1)
@@ -93,9 +99,15 @@ while(hpPokemon > 0 and hpPokemonInimigo > 0):
         print()
         print(f"{nomePokemon} foi atingido por um golpe de {nomePokemonInimigo}!")
         time.sleep(0.5)
-        print(f"{nomePokemon} sofreu {atkPokemonInimigo} de dano!")
+        danoPokemonInimigo = int(atkPokemonInimigo * (random.randint(50,120)/100.0))
+
+        if danoPokemonInimigo > atkPokemonInimigo:
+            print(f"{nomePokemon} sofreu um golpe crítico e tomou {danoPokemonInimigo} de dano!")
+        else:
+            print(f"{nomePokemon} sofreu {danoPokemonInimigo} de dano!")
+
         time.sleep(0.5)
-        hpPokemon -= atkPokemonInimigo
+        hpPokemon -= danoPokemonInimigo
         print(f"HP restante do {nomePokemon}: {hpPokemon}")
         time.sleep(1)
     
