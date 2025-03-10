@@ -45,3 +45,41 @@ print(animais)
 # 0. Sair
 
 # Este programa deve pedir para o usuário escolher uma opção da lista, exibir a informação indicada na opção e deve repetir sua execução até que a pessoa escolha SAIR.
+
+
+print("Bem vindo ao XYZ")
+
+while (True):
+
+    print('''
+    Escolha uma opção do menu:
+        
+        1. Ver nome cadastrado
+        2. Ver idade cadastrada
+        3. Ver pets cadastrados
+        4. Ver todas as informações
+        0. Sair
+
+    ''')
+
+    op = input("Digite a opção desejada do menu:")
+
+    if (op == "1"):
+        print(f"Nome cadastrado: {nome}")
+    elif (op == "2"):
+        print(f"Idade cadastrada: {idade} anos")
+    elif (op == "3"):
+        print(f"Seus pets cadastrados são: {animais}")
+    elif (op == "4"):
+        print("PERFIL DO USUÁRIO")
+
+        print(f"Nome cadastrado: {nome}")
+        print(f"Idade cadastrada: {idade} anos")
+        print(f"Seus pets cadastrados são: {animais}")
+    elif (op == "0"):
+        print("Saindo do Programa...")
+        break
+    else:
+        print("Escolha uma opção válida!")
+
+    input("PRESSIONE ENTER")
