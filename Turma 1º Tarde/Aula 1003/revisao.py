@@ -27,3 +27,21 @@ else:
     print("Você é um alienigene")
 
 # Pergunte para o usuário quantos animais de estimação ele tem. Na sequencia pergunte o nome de cada animal, utilizando repetição. Ao final, exiba o nome dos animais de estimação informados.
+
+qtdAnimais = int(input("Digite quantos animais de estimação você possui:"))
+animais = ""
+for i in range(qtdAnimais):
+    nomeAnimal = input("Digite o nome de seu animal de estimação: ")
+    animais += nomeAnimal + " "
+
+print(animais)
+
+# Exiba na tela um menu que contém as opções:
+
+# 1. Ver nome completo
+# 2. Ver idade
+# 3. Ver animais
+# 4. Ver todas as informações cadastradas (nome,idade,animais)
+# 0. Sair
+
+# Este programa deve pedir para o usuário escolher uma opção da lista, exibir a informação indicada na opção e deve repetir sua execução até que a pessoa escolha SAIR.
