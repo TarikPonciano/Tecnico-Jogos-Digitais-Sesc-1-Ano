@@ -1,6 +1,9 @@
 # Crie as variáveis nomeTreinador, nomePokemon, poderPokemon, tipoPokemon
 # Pergunte o nome do treinador e ofereça 3 opções de pokemon. Altere o valor das variáveis de acordo com o que foi escolhido.
 # Crie uma batalha simples entre o pokemon escolhido e um outro pokemon e verifique qual possui maior poder de batalha. Imprima o vencedor da batalha na tela.
+# Inclua agora nos dois pokemons as variáveis hp e ataque
+# Faça com que a batalha dure até que um dos pokemons fique sem hp, então imprima o resultado na tela
+# Melhore a batalha para exibir cada turno da batalha, quanto de dano foi sofrido e o hp restante de cada pokemon
 
 nomeTreinador = ""
 nomePokemon = ""
