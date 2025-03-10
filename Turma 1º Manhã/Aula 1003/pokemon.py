@@ -4,11 +4,16 @@
 # Inclua agora nos dois pokemons as variáveis hp e ataque
 # Faça com que a batalha dure até que um dos pokemons fique sem hp, então imprima o resultado na tela
 # Melhore a batalha para exibir cada turno da batalha, quanto de dano foi sofrido e o hp restante de cada pokemon
+import time
 
 nomeTreinador = ""
 nomePokemon = ""
 tipoPokemon = ""
 poderPokemon = 0
+hpPokemon = 0
+atkPokemon = 0
+
+
 
 print("Seja bem vindo ao mundo Pokemon!")
 print("Meu nome é professor Carvalho e serei seu guia nessa aventura!")
@@ -32,29 +37,72 @@ while (True):
         nomePokemon = "Charmander"
         tipoPokemon = "Fogo"
         poderPokemon = 100
+        atkPokemon = 20
+        hpPokemon = 60
         break
     elif (op == "2"):
         nomePokemon = "Squirtle"
         tipoPokemon = "Água"
         poderPokemon = 100
+        atkPokemon = 15
+        hpPokemon = 80
         break
     elif (op == "3"):
         nomePokemon = "Bulbasauro"
         tipoPokemon = "Grama"
         poderPokemon = 100
+        atkPokemon = 10
+        hpPokemon = 100
         break
     else:
         print("Você escolheu um pokemon inválido!")
 
-print(f"Parabéns você escolheu o {nomePokemon}!")
+print(f"Parabéns você escolheu o {nomePokemon}! Ele tem {poderPokemon} de força!")
 
 nomePokemonInimigo = "Spearow"
 tipoPokemonInimigo = "Normal"
 poderPokemonInimigo = 120
+hpPokemonInimigo = 100
+atkPokemonInimigo = 20
+
 print("Pokemon encontrado na grama!")
 print(f"Um {nomePokemonInimigo} selvagem apareceu!")
+turnos = 1
+while(hpPokemon > 0 and hpPokemonInimigo > 0):
+    print()
+    print(f"###############Turno {turnos}###############")
+    print()
 
-if (poderPokemon > poderPokemonInimigo):
-    print(f"O pokemon vitorioso foi {nomePokemon}!")
-elif (poderPokemon < poderPokemonInimigo):
-    print(f"O pokemon vitorioso foi {nomePokemonInimigo}")
+    print(f"Turno do {nomePokemon}")
+    print()
+
+    time.sleep(1)
+
+    turnos += 1
+    print(f"{nomePokemonInimigo} foi atingido por um golpe de {nomePokemon}!")
+    time.sleep(0.5)
+    print(f"{nomePokemonInimigo} sofreu {atkPokemon} de dano!")
+    time.sleep(0.5)
+    hpPokemonInimigo -= atkPokemon
+    print(f"HP restante do {nomePokemonInimigo}: {hpPokemonInimigo}")
+
+    time.sleep(1)
+
+    if (hpPokemonInimigo > 0):
+        print(f"Turno do {nomePokemonInimigo}")
+        print()
+        print(f"{nomePokemon} foi atingido por um golpe de {nomePokemonInimigo}!")
+        time.sleep(0.5)
+        print(f"{nomePokemon} sofreu {atkPokemonInimigo} de dano!")
+        time.sleep(0.5)
+        hpPokemon -= atkPokemonInimigo
+        print(f"HP restante do {nomePokemon}: {hpPokemon}")
+        time.sleep(1)
+    
+
+if hpPokemon > 0:
+    print(f"{nomePokemonInimigo} desmaiou!")
+    print("Seu pokemon foi vitorioso!")
+else:
+    print(f"{nomePokemon} desmaiou!")
+    print("Seu pokemon foi derrotado!")
