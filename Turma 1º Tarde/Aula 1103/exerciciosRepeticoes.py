@@ -35,3 +35,20 @@
 
 # for i in range(altura):
 #     print(linha)
+
+numero = int(input("Digite o seu número: "))
+
+divisores = 0
+listaDivisores = []
+
+for i in range(2, numero+1):
+    if (numero % i == 0 ):
+        divisores += 1
+        listaDivisores.append(i)
+
+if divisores <= 1:
+    print(f"O número {numero} é primo!")
+else:
+    print(f"O número {numero} não é primo!")
+
+print(f"Lista de Divisores: {listaDivisores}")
