@@ -20,6 +20,6 @@ for fruta in frutas:
 print("Frutas que começam com a letra A")
 
 for fruta in frutas:
-    if (fruta.lower() == "a"):
+    if (fruta.lower()[0] == "a"):
         print(fruta)
     
