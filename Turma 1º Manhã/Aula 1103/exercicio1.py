@@ -13,4 +13,4 @@ for fruta in frutas:
     print(f"{contador}. {fruta}")
     contador += 1
     
-# Exiba na tela apenas as frutas que começam com a letra A
+# Exiba na tela apenas as frutas que começam com a letra "A"
