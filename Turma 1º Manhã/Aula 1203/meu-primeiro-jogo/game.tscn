@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7dqo4tdo3v0e"]
+
+[ext_resource type="PackedScene" uid="uid://blgbj8wl2e0cv" path="res://jogador.tscn" id="1_80nbo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
+size = Vector2(44, 720)
+
+[node name="Game" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(345, 493)
+
+[node name="Panel" type="Panel" parent="StaticBody2D"]
+offset_right = 40.0
+offset_bottom = 718.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(21, 358)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(730, -290)
+
+[node name="Panel" type="Panel" parent="StaticBody2D2"]
+offset_right = 40.0
+offset_bottom = 718.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(21, 358)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(736, 640)
+
+[node name="Panel" type="Panel" parent="StaticBody2D3"]
+offset_right = 40.0
+offset_bottom = 718.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(21, 358)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(1052, 598)
+
+[node name="Panel" type="Panel" parent="StaticBody2D4"]
+offset_right = 40.0
+offset_bottom = 718.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(21, 358)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(1053, -271)
+
+[node name="Panel" type="Panel" parent="StaticBody2D5"]
+offset_right = 40.0
+offset_bottom = 718.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(21, 358)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="Jogador" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-130, 401)
