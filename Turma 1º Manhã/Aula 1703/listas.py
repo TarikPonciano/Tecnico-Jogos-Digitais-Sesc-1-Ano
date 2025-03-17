@@ -28,3 +28,18 @@ for i in range(5):
 
 funcionarios.sort()
 print(funcionarios)
+
+# Remova o primeiro nome da lista e remova o último nome da lista. Após realizar essas remoções, exibir a nova lista na tela.
+
+funcionarios.pop(0)
+funcionarios.pop()
+
+print(funcionarios)
+
+# Peça para o usuário um número de funcionário e mude o nome nessa posição
+
+numero = int(input("Digite a posição que deseja alterar: "))
+
+funcionarios[numero] = input("Digite o novo nome de funcionário:")
+
+print(funcionarios)
