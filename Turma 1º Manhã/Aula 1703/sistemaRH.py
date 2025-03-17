@@ -11,22 +11,40 @@
 # A opção "Ordernar alfabeticamente" deve rodar o comando lista.sort()
 
 # A opção "Sair" encerra o programa
-
 funcionarios = []
 
-while(True):
-    
+while True:
     print('''
-Bem vindo à GERENCIAMENTO RH
-          Menu:
-          1. Ver Funcionários
-          2. Adicionar Funcionário
-          3. Organizar alfabeticamente
-          0. Sair
+BEM VINDO AO GERENCIAMENTO RH
 
-          
+          MENU:
+          1. VER LISTA DE FUNCIONÁRIOS
+          2. ADICIONAR NOVO FUNCIONÁRIO
+          3. ORGANIZAR LISTA ALFABETICAMENTE
+          0. SAIR    
+
+
 ''')
-    op = input("Digite o número da opção desejada:")
+    op = input("Digite a opção desejada: ")
 
     if (op == "1"):
-        print("Lista de funcionarios:", funcionarios)
+        print(f"Lista de funcionarios: {funcionarios}")
+    elif (op == "2"):
+        print("INSERINDO FUNCIONÁRIO")
+        novoFuncionario = input("Digite o nome do novo funcionário: ")
+        if (novoFuncionario in funcionarios):
+            print("NOME DUPLICADO! NOME NÃO INSERIDO!")
+        else:
+            funcionarios.append(novoFuncionario)
+        
+    elif (op == "3"):
+        print("LISTA ORGANIZADA!")
+        funcionarios.sort()
+    elif (op == "0"):
+        print("Finalizando Programa....")
+        break
+    else: 
+        print("Você digitou uma opção inválida!")
+
+    
+    input("TECLE ENTER PARA CONTINUAR!")
