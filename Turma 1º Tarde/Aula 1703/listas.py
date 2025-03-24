@@ -31,4 +31,17 @@ for i in range(5):
 
 print(funcionarios)
 
-# Remova da lista de funcionários o primeiro funcionário da lista e o último funcionário da lista. Imprima a lista resultante ao final
+# Remova da lista de funcionários o primeiro funcionário da lista e o último funcionário da lista. Imprima a lista resultante ao final. Bônus: Para cada funcionario removido imprima "{funcionario} foi demitido!"
+
+print(f"Funcionário demitido: {funcionarios.pop(0)}")
+
+
+print(f"Funcionário demitido: {funcionarios.pop()}")
+
+print(funcionarios)
+
+
+# Organize alfabeticamente sua lista de funcionários
+
+funcionarios.sort()
+print(funcionarios)
