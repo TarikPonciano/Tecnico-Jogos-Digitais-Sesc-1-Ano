@@ -14,6 +14,16 @@
 pontos = 0
 poderClick = 1
 
+upgrades = {
+    "1": {"nome": "Mouse Quebrado", "descrição": "Você compra um mouse quebrado na feira da parangaba. Agora você pode clicar com 1 mão a mais!", "efeito": 1, "custo": 100, "quantidade": 0},
+
+    "2": {"nome": "Irmão Mais Novo", "descrição": "Encomenda um irmão mais novo na shopee para que ele clique por você!", "efeito": 5, "custo": 1000, "quantidade": 0 },
+
+    "3": {"nome": "Script Python", "descrição": "Utilizando as técnicas aprendidas em um curso profissionalizante do Senac você cria um script para clicar por você!", "efeito": 50, "custo": 15000, "quantidade": 0 }
+}
+
+
+
 while True:
     
     print(f'''
