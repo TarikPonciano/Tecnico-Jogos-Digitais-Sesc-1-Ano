@@ -7,6 +7,7 @@
 #Crie uma opção chamada "Upgrade", que faz o usuário gastar seus pontos mas aumenta o seu ganho em 1 para cada vez que foi comprado.
 
 pontos = 0
+poderClick = 1
 
 while True:
 
@@ -23,6 +24,19 @@ VOCÊ POSSUI: {pontos} PONTOS
     if (resposta == "sair"):
         print("Encerrando o jogo...")
         break
+    elif (resposta == "upgrade"):
+        print("Para realizar um upgrade, você deverá pagar 100 pontos!")
+        op = input("Você deseja realizar o upgrade? (S/N)")
+        if (op == "S" and pontos >= 100):
+            print("Upgrade adquirido!")
+            pontos -= 100
+            poderClick += 1
+        elif (op == "N"):
+            print("Até a próxima forasteiro...")
+        else:
+            print("Volte quando tiver pontos suficientes...")
     else:
-        print("Você ganhou 1 ponto!")
-        pontos += 1
+        print()
+        print(f"Você ganhou {poderClick} ponto!")
+        print()
+        pontos += poderClick
