@@ -20,7 +20,9 @@ upgrades = {
 
     "2": {"nome": "Irmão Mais Novo", "descrição": "Encomenda um irmão mais novo na shopee para que ele clique por você!", "efeito": 5, "custo": 1000, "quantidade": 0 },
 
-    "3": {"nome": "Script Python", "descrição": "Utilizando as técnicas aprendidas em um curso profissionalizante do Senac você cria um script para clicar por você!", "efeito": 50, "custo": 15000, "quantidade": 0 }
+    "3": {"nome": "Script Python", "descrição": "Utilizando as técnicas aprendidas em um curso profissionalizante do Senac você cria um script para clicar por você!", "efeito": 50, "custo": 15000, "quantidade": 0 },
+    
+    "4": {"nome": "Conselheiros de Sala", "descrição": "Você pede para seus alunos clicarem por você em troca de bis.", "efeito": 500, "custo": 30000, "quantidade": 0 }
 }
 
 
@@ -39,23 +41,59 @@ SALDO DE PONTOS: {pontos} pontos
     if (resposta == "sair"):
         print("Encerrando o jogo...")
         break
-    if (resposta == "upgrade"):
-        print('''
-    Nome: Luva de Gatinho
-    Efeito: Seus cliques valem 1 ponto a mais!
-    Custo: 100
+    if (resposta == "loja"):
+        print("BEM VINDO À LOJA DO MAGAL")
+        print()
+        print("Magal: GAROTO! Você quer clicar bastante não é? VEIO PARA O LUGAR CERTO. Temos tudo que você precisa para clicar.")
+        print()
+        print("Escolha um item abaixo: ")
+
+        for chave, conteudo in upgrades.items():
+            print(f'''
+{chave}. {conteudo["nome"]} - {conteudo["descrição"]}
+         {conteudo["custo"]} pontos - Aumenta o click em {conteudo["efeito"]}
 ''')
-        confirmacao = input("Você deseja comprar esse item? (S/N)")
+        print()
+        escolha = input("Digite o número do item desejado:")
 
-        if (confirmacao == "S"):
-            if (pontos >= 100):
-                poderClick += 1
-                pontos -= 100
+        if (escolha in upgrades):
+            upgradeEscolhido = upgrades[escolha]
+            print(f"Você escolheu um {upgradeEscolhido["nome"]}!")
+            print(f"Este item custa: {upgradeEscolhido["custo"]} pontos!")
+
+            confirmacao = input("Deseja compra esse item? (S/N)")
+
+            if (confirmacao == "S"):
+                if (pontos >= upgradeEscolhido["custo"]):
+                    poderClick += upgradeEscolhido["efeito"]
+                    pontos -= upgradeEscolhido["custo"]
+                    print(f"Você comprou um {upgradeEscolhido["nome"]}!")
+                    upgradeEscolhido["quantidade"] += 1
+                else:
+                    print("Você não tem pontos suficiente! CLIQUE MAIS!")
             else:
-                print("Você não possui pontos o suficiente. CLIQUE MAIS!")
+                print("Volte quando estiver mais decidido, forasteiro...")
         else:
-            print("Até logo forasteiro...")
+            print("Nós não vendemos esse tipo de produto por aqui!")
 
+
+    if (resposta == "upgrade"):
+        print("DESCONTINUADO!")
+#         print('''
+#     Nome: Luva de Gatinho
+#     Efeito: Seus cliques valem 1 ponto a mais!
+#     Custo: 100
+# ''')
+#         confirmacao = input("Você deseja comprar esse item? (S/N)")
+
+#         if (confirmacao == "S"):
+#             if (pontos >= 100):
+#                 poderClick += 1
+#                 pontos -= 100
+#             else:
+#                 print("Você não possui pontos o suficiente. CLIQUE MAIS!")
+#         else:
+#             print("Até logo forasteiro...")
     else:
         print()
         print(f"Você ganhou {poderClick} pontos!")
