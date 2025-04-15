@@ -10,6 +10,7 @@
 
 # Crie uma variável no início do código chamado 'upgrades', dentro dessa variável crie cada um dos 3 upgrades e cadastre suas informações.
 
+import os
 
 pontos = 0
 poderClick = 1
@@ -34,7 +35,7 @@ SALDO DE PONTOS: {pontos} pontos
     
     ''')
     resposta = input("Digite o que deseja fazer: ").lower()
-        
+    os.system("cls")
     if (resposta == "sair"):
         print("Encerrando o jogo...")
         break
@@ -60,4 +61,6 @@ SALDO DE PONTOS: {pontos} pontos
         print(f"Você ganhou {poderClick} pontos!")
         print()
         pontos += poderClick 
+
+    
 
