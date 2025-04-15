@@ -8,6 +8,12 @@
 
 pontos = 0
 poderClick = 1
+upgrades = {
+    "1": {"nome":"Mouse Quebrado", "efeito": 1, "custo": 100, "quantidade": 0},
+    "2": {"nome":"Irmão Mais Novo", "efeito": 5, "custo": 1000, "quantidade": 0},
+    "3": {"nome":"Bot de click", "efeito":20, "custo": 10000, "quantidade": 0}
+}
+
 
 while True:
 
@@ -24,17 +30,9 @@ VOCÊ POSSUI: {pontos} PONTOS
     if (resposta == "sair"):
         print("Encerrando o jogo...")
         break
-    elif (resposta == "upgrade"):
-        print("Para realizar um upgrade, você deverá pagar 100 pontos!")
-        op = input("Você deseja realizar o upgrade? (S/N)")
-        if (op == "S" and pontos >= 100):
-            print("Upgrade adquirido!")
-            pontos -= 100
-            poderClick += 1
-        elif (op == "N"):
-            print("Até a próxima forasteiro...")
-        else:
-            print("Volte quando tiver pontos suficientes...")
+    elif (resposta == "loja"):
+        print("Bem vindo à 'Loja de Upgrades'")
+        
     else:
         print()
         print(f"Você ganhou {poderClick} ponto!")
