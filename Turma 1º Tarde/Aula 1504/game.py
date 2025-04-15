@@ -6,6 +6,9 @@
 
 # Crie um sistema de upgrade. Se a pessoa escrever a palavra "upgrade" você deverá oferecer um item que custa 100 pontos para ela. Para comprar o item, a pessoa deverá confirmar que quer comprar e deverá possuir PELO MENOS 100 pontos de saldo. Após comprar o item, cada 'clique' deverá valer 1 ponto a mais.
 
+# Substitua a ação de 'upgrade' por uma 'loja'. Essa loja deverá exibir pelo menos 3 opções de upgrade. Cada upgrade deve ter um nome, uma descrição, um custo e um valor de efeito(poderClick). O jogador deverá escolher um dos itens da lista e confirmar a compra. Se o jogador não tiver pontos suficientes, você deverá imprimir uma mensagem de erro, se tiver deverá incrementar o seu poder de clique total.
+
+# Crie uma variável no início do código chamado 'upgrades', dentro dessa variável crie cada um dos 3 upgrades e cadastre suas informações.
 
 
 pontos = 0
