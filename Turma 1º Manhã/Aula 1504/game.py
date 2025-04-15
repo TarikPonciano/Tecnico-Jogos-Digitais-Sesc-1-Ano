@@ -6,6 +6,14 @@
 
 #Crie uma opção chamada "Upgrade", que faz o usuário gastar seus pontos mas aumenta o seu ganho em 1 para cada vez que foi comprado.
 
+#Implemente as melhorias realizadas no jogo
+
+#Mude as informações do jogo para se encaixar em uma temática a sua escolha. 
+
+#Crie 2 novos upgrades para o jogo
+
+#Implemente pelo menos 1 nova mecânica
+
 pontos = 0
 poderClick = 1
 
