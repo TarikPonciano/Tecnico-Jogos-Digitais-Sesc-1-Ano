@@ -9,11 +9,11 @@
 pontos = 0
 poderClick = 1
 upgrades = {
-    "1": {"nome":"Mouse Quebrado", "efeito": 1, "custo": 100, "quantidade": 0, "descrição": "Mouse velho doado pela sua avó. Ele permite que você clique 1 vez a mais."},
+    "1": {"nome":"Mouse Quebrado", "efeito": 1, "custo": 100, "quantidade": 0, "descrição": "Mouse velho doado pela sua avó. Ele permite que você clique 1 vez a mais por repetição."},
 
-    "2": {"nome":"Irmão Mais Novo", "efeito": 5, "custo": 1000, "quantidade": 0, "descrição": "Suborne seu irmão para que ele te ajude a clicar. Ele permite que você clique 5 vezes a mais."},
+    "2": {"nome":"Irmão Mais Novo", "efeito": 5, "custo": 1000, "quantidade": 0, "descrição": "Suborne seu irmão para que ele te ajude a clicar. Ele permite que você clique 5 vezes a mais por repetição."},
     
-    "3": {"nome":"Bot de click", "efeito":20, "custo": 10000, "quantidade": 0, "descrição": "Utilizando os conhecimentos do curso técnico de jogos você cria um bot de click. Ele permite que você clique 20 vezes a mais."}
+    "3": {"nome":"Bot de click", "efeito":20, "custo": 10000, "quantidade": 0, "descrição": "Utilizando os conhecimentos do curso técnico de jogos você cria um bot de click. Ele permite que você clique 20 vezes a mais por repetição."}
 }
 
 
@@ -22,7 +22,7 @@ while True:
     print(f'''
           
 -------//---------
-VOCÊ POSSUI: {pontos} PONTOS
+VOCÊ POSSUI: \033[34m{pontos} PONTOS\033[0m
 -------//---------
 
 ''')
