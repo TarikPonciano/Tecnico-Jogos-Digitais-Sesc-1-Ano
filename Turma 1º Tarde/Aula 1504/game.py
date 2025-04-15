@@ -6,6 +6,8 @@
 
 # Crie um sistema de upgrade. Se a pessoa escrever a palavra "upgrade" você deverá oferecer um item que custa 100 pontos para ela. Para comprar o item, a pessoa deverá confirmar que quer comprar e deverá possuir PELO MENOS 100 pontos de saldo. Após comprar o item, cada 'clique' deverá valer 1 ponto a mais.
 
+
+
 pontos = 0
 poderClick = 1
 
@@ -24,12 +26,25 @@ SALDO DE PONTOS: {pontos} pontos
         print("Encerrando o jogo...")
         break
     if (resposta == "upgrade"):
-        print("Você come um pedaço de torta e se enche de determinação! Seu clique fica mais poderoso!")
-        poderClick += 1
+        print('''
+    Nome: Luva de Gatinho
+    Efeito: Seus cliques valem 1 ponto a mais!
+    Custo: 100
+''')
+        confirmacao = input("Você deseja comprar esse item? (S/N)")
+
+        if (confirmacao == "S"):
+            if (pontos >= 100):
+                poderClick += 1
+                pontos -= 100
+            else:
+                print("Você não possui pontos o suficiente. CLIQUE MAIS!")
+        else:
+            print("Até logo forasteiro...")
 
     else:
         print()
         print(f"Você ganhou {poderClick} pontos!")
         print()
-        pontos += poderClick
+        pontos += poderClick 
 
