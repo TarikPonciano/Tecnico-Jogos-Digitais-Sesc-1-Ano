@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b06ddwpooc18w"]
+
+[ext_resource type="Script" uid="uid://bjphy0kf6u63x" path="res://calculadora_idade.gd" id="1_hjb1s"]
+
+[node name="Calculadora Idade" type="Node2D"]
+script = ExtResource("1_hjb1s")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 131.0
+offset_right = 1027.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 48
+text = "https://meet.google.com/aop-sesx-unx"
