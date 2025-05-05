@@ -10,4 +10,67 @@ offset_left = 131.0
 offset_right = 1027.0
 offset_bottom = 67.0
 theme_override_font_sizes/font_size = 48
-text = "https://meet.google.com/aop-sesx-unx"
+text = "https://meet.google.com/jvb-wauj-kfw"
+
+[node name="RotuloNome" type="Label" parent="."]
+offset_left = 216.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 215.0
+text = "Nome:"
+
+[node name="CampoNome" type="LineEdit" parent="."]
+offset_left = 288.0
+offset_top = 192.0
+offset_right = 576.0
+offset_bottom = 223.0
+placeholder_text = "Digite seu nome"
+
+[node name="RotuloAnoNascimento" type="Label" parent="."]
+offset_left = 216.0
+offset_top = 248.0
+offset_right = 268.0
+offset_bottom = 271.0
+text = "Ano de Nascimento:"
+
+[node name="CampoAnoNascimento" type="LineEdit" parent="."]
+offset_left = 392.0
+offset_top = 248.0
+offset_right = 632.0
+offset_bottom = 279.0
+placeholder_text = "Digite seu ano de nascimento"
+
+[node name="RotuloAnoAtual" type="Label" parent="."]
+offset_left = 216.0
+offset_top = 296.0
+offset_right = 372.0
+offset_bottom = 319.0
+text = "Ano Atual:"
+
+[node name="CampoAnoAtual" type="LineEdit" parent="."]
+offset_left = 328.0
+offset_top = 296.0
+offset_right = 520.0
+offset_bottom = 327.0
+placeholder_text = "Digite o ano atual"
+
+[node name="CheckFezAniversario" type="CheckButton" parent="."]
+offset_left = 208.0
+offset_top = 344.0
+offset_right = 379.0
+offset_bottom = 375.0
+text = "Fez Aniversário:"
+
+[node name="BotaoCalcular" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 416.0
+offset_right = 465.0
+offset_bottom = 447.0
+text = "CALCULAR"
+
+[node name="RotuloResultado" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 472.0
+offset_right = 264.0
+offset_bottom = 495.0
+text = "Resultado:"

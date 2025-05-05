@@ -15,6 +15,20 @@ func _ready() -> void:
 	var anoAtual = 2025
 	#Ajuste o código para levar em consideração se a pessoa já fez aniversário ou não. Se ela não fez aniversário o cálculo da idade deverá ser (anoAtual - anoNascimento - 1), do contrário deverá ser (anoAtual - anoNascimento)
 	var fezAniversario = false
+	var idade
+	if (fezAniversario == true):
+		idade = anoAtual - anoNascimento
+	else:
+		idade = anoAtual - anoNascimento - 1
+	
+	print("Olá ",nome,", seja bem vindo! Você tem ",idade," anos de idade!")
+
+
+func _on_botao_calcular_pressed() -> void:
+	var nome = $CampoNome.text
+	var anoNascimento = int($CampoAnoNascimento.text)
+	var anoAtual = int($CampoAnoAtual.text)
+	var fezAniversario = $CheckFezAniversario.button_pressed
 	
 	var idade
 	
@@ -22,5 +36,8 @@ func _ready() -> void:
 		idade = anoAtual - anoNascimento
 	else:
 		idade = anoAtual - anoNascimento - 1
+		
+	$RotuloResultado.text = str("Resultado: ", idade," anos")
 	
-	print("Olá ",nome,", seja bem vindo! Você tem ",idade," anos de idade!")
+	
+	
