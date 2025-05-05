@@ -74,3 +74,5 @@ offset_top = 472.0
 offset_right = 264.0
 offset_bottom = 495.0
 text = "Resultado:"
+
+[connection signal="pressed" from="BotaoCalcular" to="." method="_on_botao_calcular_pressed"]
