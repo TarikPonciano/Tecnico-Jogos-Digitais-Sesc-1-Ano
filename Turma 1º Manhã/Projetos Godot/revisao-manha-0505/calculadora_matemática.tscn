@@ -65,12 +65,4 @@ offset_right = 614.0
 offset_bottom = 519.0
 text = "Resultado: "
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 136.0
-offset_top = 16.0
-offset_right = 1024.0
-offset_bottom = 83.0
-theme_override_font_sizes/font_size = 48
-text = "https://meet.google.com/awu-vjfo-geq"
-
 [connection signal="pressed" from="BotaoCalcular" to="." method="_on_botao_calcular_pressed"]
