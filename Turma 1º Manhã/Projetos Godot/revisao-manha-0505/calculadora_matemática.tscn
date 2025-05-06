@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://di1o3vf34jl63"]
+
+[ext_resource type="Script" uid="uid://fou242htcbxq" path="res://calculadora_matemática.gd" id="1_ui328"]
+
+[node name="Calculadora Matemática" type="Node2D"]
+script = ExtResource("1_ui328")
