@@ -4,3 +4,73 @@
 
 [node name="Calculadora Matemática" type="Node2D"]
 script = ExtResource("1_ui328")
+
+[node name="RotuloNum1" type="Label" parent="."]
+offset_left = 496.0
+offset_top = 144.0
+offset_right = 574.0
+offset_bottom = 167.0
+text = "Número 1"
+
+[node name="CampoNum1" type="LineEdit" parent="."]
+offset_left = 592.0
+offset_top = 144.0
+offset_right = 800.0
+offset_bottom = 175.0
+placeholder_text = "Digite um número"
+
+[node name="RotuloNum2" type="Label" parent="."]
+offset_left = 496.0
+offset_top = 200.0
+offset_right = 584.0
+offset_bottom = 223.0
+text = "Número 2"
+
+[node name="CampoNum2" type="LineEdit" parent="."]
+offset_left = 592.0
+offset_top = 200.0
+offset_right = 800.0
+offset_bottom = 231.0
+placeholder_text = "Digite um número"
+
+[node name="RotuloOp" type="Label" parent="."]
+offset_left = 496.0
+offset_top = 264.0
+offset_right = 571.0
+offset_bottom = 287.0
+text = "Operação"
+
+[node name="ListaOp" type="ItemList" parent="."]
+offset_left = 592.0
+offset_top = 256.0
+offset_right = 728.0
+offset_bottom = 384.0
+item_count = 4
+item_0/text = "+ Soma"
+item_1/text = "- Subtração"
+item_2/text = "* Multiplicação"
+item_3/text = "/ Divisão"
+
+[node name="BotaoCalcular" type="Button" parent="."]
+offset_left = 656.0
+offset_top = 408.0
+offset_right = 745.0
+offset_bottom = 439.0
+text = "CALCULAR"
+
+[node name="RotuloResultado" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 496.0
+offset_right = 614.0
+offset_bottom = 519.0
+text = "Resultado: "
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 16.0
+offset_right = 1024.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 48
+text = "https://meet.google.com/awu-vjfo-geq"
+
+[connection signal="pressed" from="BotaoCalcular" to="." method="_on_botao_calcular_pressed"]
