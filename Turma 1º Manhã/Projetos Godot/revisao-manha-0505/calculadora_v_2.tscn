@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsrs2s42nc4jr"]
+
+[ext_resource type="Script" path="res://calculadora_v_2.gd" id="1_hchmd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yuxj"]
+bg_color = Color(0.99528, 0.907472, 0.942546, 1)
+
+[sub_resource type="Theme" id="Theme_my4rr"]
+Button/colors/font_color = Color(0.711722, 0.272066, 0.479593, 1)
+Button/font_sizes/font_size = 48
+Button/styles/normal = SubResource("StyleBoxFlat_1yuxj")
+
+[node name="Calculadora V2" type="Node2D"]
+script = ExtResource("1_hchmd")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 314.0
+offset_top = 53.0
+offset_right = 973.0
+offset_bottom = 597.0
+theme = SubResource("Theme_my4rr")
+
+[node name="Botao3" type="Button" parent="."]
+offset_left = 705.0
+offset_top = 180.0
+offset_right = 807.0
+offset_bottom = 237.0
+text = "3
+"
+
+[node name="Botao1" type="Button" parent="."]
+offset_left = 354.0
+offset_top = 179.0
+offset_right = 453.0
+offset_bottom = 237.0
+text = "1"
+
+[node name="Botao2" type="Button" parent="."]
+offset_left = 531.0
+offset_top = 180.0
+offset_right = 631.0
+offset_bottom = 237.0
+text = "2
+"
+
+[node name="Botao6" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 284.0
+offset_right = 806.0
+offset_bottom = 341.0
+text = "6
+"
+
+[node name="Botao4" type="Button" parent="."]
+offset_left = 353.0
+offset_top = 283.0
+offset_right = 452.0
+offset_bottom = 341.0
+text = "4"
+
+[node name="Botao5" type="Button" parent="."]
+offset_left = 530.0
+offset_top = 284.0
+offset_right = 630.0
+offset_bottom = 341.0
+text = "5"
+
+[node name="Botao9" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 392.0
+offset_right = 806.0
+offset_bottom = 449.0
+text = "9"
+
+[node name="Botao7" type="Button" parent="."]
+offset_left = 353.0
+offset_top = 391.0
+offset_right = 452.0
+offset_bottom = 449.0
+text = "7"
+
+[node name="Botao8" type="Button" parent="."]
+offset_left = 530.0
+offset_top = 392.0
+offset_right = 630.0
+offset_bottom = 449.0
+text = "8
+"
+
+[node name="Botao0" type="Button" parent="."]
+offset_left = 533.0
+offset_top = 485.0
+offset_right = 633.0
+offset_bottom = 542.0
+text = "0
+"
+
+[node name="BotaoAdição" type="Button" parent="."]
+offset_left = 894.0
+offset_top = 200.0
+offset_right = 953.0
+offset_bottom = 231.0
+text = "+"
+
+[node name="BotaoSubtração" type="Button" parent="."]
+offset_left = 897.0
+offset_top = 260.0
+offset_right = 956.0
+offset_bottom = 291.0
+text = "-"
+
+[node name="BotaoDivisão" type="Button" parent="."]
+offset_left = 897.0
+offset_top = 326.0
+offset_right = 956.0
+offset_bottom = 357.0
+text = "/"
+
+[node name="BotaoMultiplicação" type="Button" parent="."]
+offset_left = 898.0
+offset_top = 385.0
+offset_right = 957.0
+offset_bottom = 416.0
+text = "*"
+
+[node name="BotaoCalcular" type="Button" parent="."]
+offset_left = 756.0
+offset_top = 502.0
+offset_right = 927.0
+offset_bottom = 563.0
+text = "="
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 415.0
+offset_top = 90.0
+offset_right = 874.0
+offset_bottom = 146.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 429.0
+offset_top = 93.0
+offset_right = 848.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 36
+clip_text = true
+text_overrun_behavior = 1
+
+[connection signal="pressed" from="Botao1" to="." method="_on_botao_1_pressed"]
+[connection signal="pressed" from="Botao2" to="." method="_on_botao_2_pressed"]
