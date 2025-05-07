@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh1yhtrsqu5fh"]
+
+[ext_resource type="Script" uid="uid://dp6ijhx05qkk1" path="res://calculadora_idade.gd" id="1_hjb1s"]
+
+[node name="Calculadora Idade" type="Node2D"]
+script = ExtResource("1_hjb1s")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 480.0
+offset_top = 8.0
+offset_right = 793.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.851919, 0.104084, 0.395235, 1)
+theme_override_font_sizes/font_size = 36
+text = "Calculadora Idade"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 144.0
+offset_right = 492.0
+offset_bottom = 167.0
+text = "Nome:"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 520.0
+offset_top = 144.0
+offset_right = 760.0
+offset_bottom = 175.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 360.0
+offset_top = 192.0
+offset_right = 492.0
+offset_bottom = 215.0
+text = "Ano Nascimento:"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 408.0
+offset_top = 232.0
+offset_right = 488.0
+offset_bottom = 255.0
+text = "Ano Atual:"
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+offset_left = 520.0
+offset_top = 192.0
+offset_right = 760.0
+offset_bottom = 223.0
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+offset_left = 520.0
+offset_top = 232.0
+offset_right = 760.0
+offset_bottom = 263.0
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 416.0
+offset_top = 280.0
+offset_right = 582.0
+offset_bottom = 311.0
+text = "Fez Aniversário"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 584.0
+offset_top = 344.0
+offset_right = 673.0
+offset_bottom = 375.0
+text = "CALCULAR"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 400.0
+offset_right = 542.0
+offset_bottom = 423.0
+text = "Resultado: "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
