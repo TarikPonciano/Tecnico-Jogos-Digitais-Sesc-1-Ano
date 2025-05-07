@@ -139,11 +139,22 @@ offset_bottom = 146.0
 [node name="Label" type="Label" parent="."]
 offset_left = 429.0
 offset_top = 93.0
-offset_right = 848.0
+offset_right = 855.0
 offset_bottom = 143.0
 theme_override_font_sizes/font_size = 36
 clip_text = true
 text_overrun_behavior = 1
 
+[connection signal="pressed" from="Botao3" to="." method="_on_botao_3_pressed"]
 [connection signal="pressed" from="Botao1" to="." method="_on_botao_1_pressed"]
 [connection signal="pressed" from="Botao2" to="." method="_on_botao_2_pressed"]
+[connection signal="pressed" from="Botao6" to="." method="_on_botao_6_pressed"]
+[connection signal="pressed" from="Botao4" to="." method="_on_botao_4_pressed"]
+[connection signal="pressed" from="Botao5" to="." method="_on_botao_5_pressed"]
+[connection signal="pressed" from="Botao9" to="." method="_on_botao_9_pressed"]
+[connection signal="pressed" from="Botao7" to="." method="_on_botao_7_pressed"]
+[connection signal="pressed" from="Botao8" to="." method="_on_botao_8_pressed"]
+[connection signal="pressed" from="Botao0" to="." method="_on_botao_0_pressed"]
+[connection signal="pressed" from="BotaoAdição" to="." method="_on_botao_adição_pressed"]
+[connection signal="pressed" from="BotaoSubtração" to="." method="_on_botao_subtração_pressed"]
+[connection signal="pressed" from="BotaoCalcular" to="." method="_on_botao_calcular_pressed"]
