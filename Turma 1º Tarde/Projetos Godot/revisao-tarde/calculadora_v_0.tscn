@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1w24aqh42bw2"]
+
+[ext_resource type="Script" uid="uid://dty2cwvde3kdg" path="res://calculadora_v_0.gd" id="1_yqvih"]
+
+[node name="Calculadora V0" type="Node2D"]
+script = ExtResource("1_yqvih")

@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://bltpf5kiwhv0a"]
+
+[ext_resource type="Script" uid="uid://xv1rq2685scv" path="res://calculadora_v_1.gd" id="1_eyaok"]
+
+[node name="Calculadora V1" type="Node2D"]
+script = ExtResource("1_eyaok")
+
+[node name="RotuloTitulo" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 24.0
+offset_right = 817.0
+offset_bottom = 91.0
+scale = Vector2(0.866505, 0.979859)
+theme_override_colors/font_color = Color(0, 0.792157, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Minha Calculadora"
+
+[node name="RotuloPrimeiroNumero" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 192.0
+offset_right = 423.0
+offset_bottom = 215.0
+text = "Primeiro Número"
+
+[node name="CampoPrimeiroNumero" type="LineEdit" parent="."]
+offset_left = 456.0
+offset_top = 192.0
+offset_right = 680.0
+offset_bottom = 223.0
+placeholder_text = "Digite um número"
+
+[node name="RotuloSegundoNumero" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 240.0
+offset_right = 328.0
+offset_bottom = 263.0
+text = "Segundo Número"
+
+[node name="CampoSegundoNumero" type="LineEdit" parent="."]
+offset_left = 456.0
+offset_top = 240.0
+offset_right = 680.0
+offset_bottom = 271.0
+placeholder_text = "Digite um número"
+
+[node name="RotuloOperacoes" type="Label" parent="."]
+offset_left = 344.0
+offset_top = 296.0
+offset_right = 427.0
+offset_bottom = 319.0
+text = "Operações"
+
+[node name="ListaOperacoes" type="OptionButton" parent="."]
+offset_left = 456.0
+offset_top = 296.0
+offset_right = 488.0
+offset_bottom = 316.0
+item_count = 4
+popup/item_0/text = "+ Soma"
+popup/item_0/id = 0
+popup/item_1/text = "- Subtração"
+popup/item_1/id = 1
+popup/item_2/text = "* Multiplicação"
+popup/item_2/id = 2
+popup/item_3/text = "/ Divisão"
+popup/item_3/id = 3
+
+[node name="BotaoCalcular" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 360.0
+offset_right = 567.0
+offset_bottom = 391.0
+text = "Calcular
+"
+
+[node name="RotuloResultado" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 424.0
+offset_right = 483.0
+offset_bottom = 469.0
+theme_override_font_sizes/font_size = 32
+text = "Resultado: "
+
+[connection signal="pressed" from="BotaoCalcular" to="." method="_on_botao_calcular_pressed"]
