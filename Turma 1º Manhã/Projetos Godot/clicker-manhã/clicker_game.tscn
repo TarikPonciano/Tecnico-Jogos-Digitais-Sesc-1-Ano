@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06phnyj7i72e"]
+
+[ext_resource type="Script" uid="uid://udsq6krfphxe" path="res://clicker_game.gd" id="1_l1c2j"]
+
+[node name="Clicker Game" type="Node2D"]
+script = ExtResource("1_l1c2j")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 376.0
+offset_top = 24.0
+offset_right = 676.0
+offset_bottom = 47.0
+text = "https://meet.google.com/pqw-ieox-sha"
+
+[node name="RotuloScore" type="Label" parent="."]
+offset_left = 488.0
+offset_top = 112.0
+offset_right = 528.0
+offset_bottom = 135.0
+text = "Score: 0"
+
+[node name="BotaoClicar" type="Button" parent="."]
+offset_left = 472.0
+offset_top = 176.0
+offset_right = 573.0
+offset_bottom = 207.0
+text = "Clique Aqui!"
+
+[node name="BotaoUpgradeClick" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 240.0
+offset_right = 618.0
+offset_bottom = 271.0
+text = "Upgrade Click: 10 points"
+
+[connection signal="pressed" from="BotaoClicar" to="." method="_on_botao_clicar_pressed"]
+[connection signal="pressed" from="BotaoUpgradeClick" to="." method="_on_botao_upgrade_click_pressed"]
