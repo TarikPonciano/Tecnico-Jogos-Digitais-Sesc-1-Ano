@@ -1,28 +1,115 @@
-[gd_scene load_steps=2 format=3 uid="uid://c06phnyj7i72e"]
+[gd_scene load_steps=10 format=3 uid="uid://c06phnyj7i72e"]
 
 [ext_resource type="Script" uid="uid://udsq6krfphxe" path="res://clicker_game.gd" id="1_l1c2j"]
 
+[sub_resource type="SystemFont" id="SystemFont_l1c2j"]
+font_names = PackedStringArray("Arial")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gcxp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kaqi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ob8g"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1c2j"]
+bg_color = Color(0.893391, 0.467704, 0.191359, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqv28"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="SystemFont" id="SystemFont_kcwbx"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="Theme" id="Theme_2gcxp"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = SubResource("SystemFont_l1c2j")
+Button/styles/disabled = SubResource("StyleBoxFlat_2gcxp")
+Button/styles/focus = SubResource("StyleBoxFlat_5kaqi")
+Button/styles/hover = SubResource("StyleBoxFlat_3ob8g")
+Button/styles/normal = SubResource("StyleBoxFlat_l1c2j")
+Button/styles/pressed = SubResource("StyleBoxFlat_yqv28")
+Label/font_sizes/font_size = 20
+Label/fonts/font = SubResource("SystemFont_kcwbx")
+
 [node name="Clicker Game" type="Node2D"]
 script = ExtResource("1_l1c2j")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 376.0
-offset_top = 24.0
-offset_right = 676.0
-offset_bottom = 47.0
-text = "https://meet.google.com/pqw-ieox-sha"
 
 [node name="RotuloScore" type="Label" parent="."]
 offset_left = 488.0
 offset_top = 112.0
 offset_right = 528.0
 offset_bottom = 135.0
-text = "Score: 0"
+text = "Score: 0 (+0/s)"
 
 [node name="BotaoClicar" type="Button" parent="."]
-offset_left = 472.0
+offset_left = 464.0
 offset_top = 176.0
-offset_right = 573.0
+offset_right = 565.0
 offset_bottom = 207.0
 text = "Clique Aqui!"
 
@@ -33,5 +120,119 @@ offset_right = 618.0
 offset_bottom = 271.0
 text = "Upgrade Click: 10 points"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 392.0
+offset_right = 663.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 48
+text = "Meu Clicker"
+
+[node name="MenuAjudantes" type="Panel" parent="."]
+clip_contents = true
+offset_left = 776.0
+offset_top = 8.0
+offset_right = 1136.0
+offset_bottom = 632.0
+theme = SubResource("Theme_2gcxp")
+
+[node name="TituloMenuAjudantes" type="Label" parent="MenuAjudantes"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 274.0
+offset_bottom = 37.0
+text = "Contratar Ajudantes"
+
+[node name="Ajudante1" type="Panel" parent="MenuAjudantes"]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 360.0
+offset_bottom = 200.0
+
+[node name="TituloAjudante1" type="Label" parent="MenuAjudantes/Ajudante1"]
+layout_mode = 2
+offset_left = 112.0
+offset_right = 262.0
+offset_bottom = 29.0
+text = "Mouse Adicional"
+
+[node name="QuantidadeAjudante1" type="Label" parent="MenuAjudantes/Ajudante1"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 89.0
+text = "QTD
+0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PontosAjudante1" type="Label" parent="MenuAjudantes/Ajudante1"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 40.0
+offset_right = 205.0
+offset_bottom = 89.0
+text = "Pontos/S
+0.5/s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComprarAjudante1" type="Button" parent="MenuAjudantes/Ajudante1"]
+offset_left = 256.0
+offset_top = 40.0
+offset_right = 335.0
+offset_bottom = 94.0
+text = "Comprar 
+20 points"
+
+[node name="Ajudante2" type="Panel" parent="MenuAjudantes"]
+offset_top = 256.0
+offset_right = 360.0
+offset_bottom = 368.0
+
+[node name="TituloAjudante2" type="Label" parent="MenuAjudantes/Ajudante2"]
+layout_mode = 2
+offset_left = 112.0
+offset_right = 271.0
+offset_bottom = 29.0
+text = "Irmão Mais Novo"
+
+[node name="QuantidadeAjudante2" type="Label" parent="MenuAjudantes/Ajudante2"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 89.0
+text = "QTD
+0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PontosAjudante2" type="Label" parent="MenuAjudantes/Ajudante2"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 40.0
+offset_right = 205.0
+offset_bottom = 89.0
+text = "Pontos/S
+1.0/s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComprarAjudante2" type="Button" parent="MenuAjudantes/Ajudante2"]
+offset_left = 256.0
+offset_top = 40.0
+offset_right = 335.0
+offset_bottom = 94.0
+text = "Comprar 
+100 points"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="pressed" from="BotaoClicar" to="." method="_on_botao_clicar_pressed"]
 [connection signal="pressed" from="BotaoUpgradeClick" to="." method="_on_botao_upgrade_click_pressed"]
+[connection signal="pressed" from="MenuAjudantes/Ajudante1/ComprarAjudante1" to="." method="_on_comprar_ajudante_1_pressed"]
+[connection signal="pressed" from="MenuAjudantes/Ajudante2/ComprarAjudante2" to="." method="_on_comprar_ajudante_2_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
