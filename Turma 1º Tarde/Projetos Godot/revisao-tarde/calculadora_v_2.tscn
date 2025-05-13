@@ -1,0 +1,181 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsjm8b5u7ko1"]
+
+[ext_resource type="Script" uid="uid://b3lcytgsahkpo" path="res://corpo_calculadora.gd" id="1_y23mr"]
+
+[sub_resource type="SystemFont" id="SystemFont_y23mr"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkncg"]
+bg_color = Color(0.893013, 0.455307, 0.35721, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu1s4"]
+bg_color = Color(0.967983, 0.391701, 0.202193, 1)
+
+[sub_resource type="Theme" id="Theme_cltvf"]
+Button/colors/font_color = Color(0.817022, 0.915364, 0.717618, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = SubResource("SystemFont_y23mr")
+Button/styles/hover = SubResource("StyleBoxFlat_mkncg")
+Button/styles/normal = SubResource("StyleBoxFlat_pu1s4")
+
+[sub_resource type="SystemFont" id="SystemFont_mkncg"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[node name="Calculadora V2" type="Node2D"]
+
+[node name="CorpoCalculadora" type="Panel" parent="."]
+offset_left = 352.0
+offset_top = 8.0
+offset_right = 800.0
+offset_bottom = 640.0
+theme = SubResource("Theme_cltvf")
+script = ExtResource("1_y23mr")
+
+[node name="Visor" type="Panel" parent="CorpoCalculadora"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 424.0
+offset_bottom = 104.0
+
+[node name="TextoVisor" type="Label" parent="CorpoCalculadora/Visor"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 80.0
+theme_override_fonts/font = SubResource("SystemFont_mkncg")
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Botao7" type="Button" parent="CorpoCalculadora"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 248.0
+offset_right = 104.0
+offset_bottom = 312.0
+text = "7"
+
+[node name="Botao8" type="Button" parent="CorpoCalculadora"]
+offset_left = 144.0
+offset_top = 248.0
+offset_right = 208.0
+offset_bottom = 312.0
+text = "8"
+
+[node name="Botao9" type="Button" parent="CorpoCalculadora"]
+offset_left = 248.0
+offset_top = 248.0
+offset_right = 312.0
+offset_bottom = 312.0
+text = "9"
+
+[node name="BotaoSoma" type="Button" parent="CorpoCalculadora"]
+offset_left = 40.0
+offset_top = 152.0
+offset_right = 104.0
+offset_bottom = 216.0
+text = "+"
+
+[node name="BotaoSubtracao" type="Button" parent="CorpoCalculadora"]
+offset_left = 144.0
+offset_top = 152.0
+offset_right = 208.0
+offset_bottom = 216.0
+text = "-"
+
+[node name="BotaoMultiplicacao" type="Button" parent="CorpoCalculadora"]
+offset_left = 248.0
+offset_top = 152.0
+offset_right = 312.0
+offset_bottom = 216.0
+text = "*"
+
+[node name="BotaoDivisao" type="Button" parent="CorpoCalculadora"]
+offset_left = 352.0
+offset_top = 152.0
+offset_right = 416.0
+offset_bottom = 216.0
+text = "/"
+
+[node name="BotaoCalcular" type="Button" parent="CorpoCalculadora"]
+offset_left = 352.0
+offset_top = 440.0
+offset_right = 416.0
+offset_bottom = 576.0
+text = "="
+
+[node name="Botao4" type="Button" parent="CorpoCalculadora"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 336.0
+offset_right = 104.0
+offset_bottom = 400.0
+text = "4"
+
+[node name="Botao5" type="Button" parent="CorpoCalculadora"]
+offset_left = 144.0
+offset_top = 336.0
+offset_right = 208.0
+offset_bottom = 400.0
+text = "5"
+
+[node name="Botao6" type="Button" parent="CorpoCalculadora"]
+offset_left = 248.0
+offset_top = 336.0
+offset_right = 312.0
+offset_bottom = 400.0
+text = "6"
+
+[node name="Botao1" type="Button" parent="CorpoCalculadora"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 424.0
+offset_right = 104.0
+offset_bottom = 488.0
+text = "1"
+
+[node name="Botao2" type="Button" parent="CorpoCalculadora"]
+offset_left = 144.0
+offset_top = 424.0
+offset_right = 208.0
+offset_bottom = 488.0
+text = "2"
+
+[node name="Botao0" type="Button" parent="CorpoCalculadora"]
+offset_left = 96.0
+offset_top = 512.0
+offset_right = 264.0
+offset_bottom = 576.0
+text = "0"
+
+[node name="Botao3" type="Button" parent="CorpoCalculadora"]
+offset_left = 248.0
+offset_top = 424.0
+offset_right = 312.0
+offset_bottom = 488.0
+text = "3"
+
+[node name="BotaoCE" type="Button" parent="CorpoCalculadora"]
+offset_left = 352.0
+offset_top = 248.0
+offset_right = 416.0
+offset_bottom = 312.0
+text = "CE"
+
+[connection signal="pressed" from="CorpoCalculadora/Botao7" to="CorpoCalculadora" method="_on_botao_7_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao8" to="CorpoCalculadora" method="_on_botao_8_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao9" to="CorpoCalculadora" method="_on_botao_9_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/BotaoSoma" to="CorpoCalculadora" method="_on_botao_soma_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/BotaoSubtracao" to="CorpoCalculadora" method="_on_botao_subtracao_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/BotaoMultiplicacao" to="CorpoCalculadora" method="_on_botao_multiplicacao_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/BotaoDivisao" to="CorpoCalculadora" method="_on_botao_divisao_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/BotaoCalcular" to="CorpoCalculadora" method="_on_botao_calcular_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao4" to="CorpoCalculadora" method="_on_botao_4_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao5" to="CorpoCalculadora" method="_on_botao_5_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao6" to="CorpoCalculadora" method="_on_botao_6_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao1" to="CorpoCalculadora" method="_on_botao_1_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao2" to="CorpoCalculadora" method="_on_botao_2_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao0" to="CorpoCalculadora" method="_on_botao_0_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/Botao3" to="CorpoCalculadora" method="_on_botao_3_pressed"]
+[connection signal="pressed" from="CorpoCalculadora/BotaoCE" to="CorpoCalculadora" method="_on_botao_ce_pressed"]
