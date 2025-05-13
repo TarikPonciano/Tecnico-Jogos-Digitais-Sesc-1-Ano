@@ -127,15 +127,18 @@ offset_bottom = 67.0
 theme_override_font_sizes/font_size = 48
 text = "Meu Clicker"
 
-[node name="MenuAjudantes" type="Panel" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 904.0
+offset_top = 16.0
+offset_right = 1112.0
+offset_bottom = 648.0
+
+[node name="MenuAjudantes" type="Panel" parent="ScrollContainer"]
 clip_contents = true
-offset_left = 776.0
-offset_top = 8.0
-offset_right = 1136.0
-offset_bottom = 632.0
+layout_mode = 2
 theme = SubResource("Theme_2gcxp")
 
-[node name="TituloMenuAjudantes" type="Label" parent="MenuAjudantes"]
+[node name="TituloMenuAjudantes" type="Label" parent="ScrollContainer/MenuAjudantes"]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 8.0
@@ -143,20 +146,20 @@ offset_right = 274.0
 offset_bottom = 37.0
 text = "Contratar Ajudantes"
 
-[node name="Ajudante1" type="Panel" parent="MenuAjudantes"]
+[node name="Ajudante1" type="Panel" parent="ScrollContainer/MenuAjudantes"]
 layout_mode = 0
 offset_top = 88.0
 offset_right = 360.0
 offset_bottom = 200.0
 
-[node name="TituloAjudante1" type="Label" parent="MenuAjudantes/Ajudante1"]
+[node name="TituloAjudante1" type="Label" parent="ScrollContainer/MenuAjudantes/Ajudante1"]
 layout_mode = 2
 offset_left = 112.0
 offset_right = 262.0
 offset_bottom = 29.0
 text = "Mouse Adicional"
 
-[node name="QuantidadeAjudante1" type="Label" parent="MenuAjudantes/Ajudante1"]
+[node name="QuantidadeAjudante1" type="Label" parent="ScrollContainer/MenuAjudantes/Ajudante1"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
@@ -167,7 +170,7 @@ text = "QTD
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PontosAjudante1" type="Label" parent="MenuAjudantes/Ajudante1"]
+[node name="PontosAjudante1" type="Label" parent="ScrollContainer/MenuAjudantes/Ajudante1"]
 layout_mode = 0
 offset_left = 136.0
 offset_top = 40.0
@@ -178,7 +181,7 @@ text = "Pontos/S
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ComprarAjudante1" type="Button" parent="MenuAjudantes/Ajudante1"]
+[node name="ComprarAjudante1" type="Button" parent="ScrollContainer/MenuAjudantes/Ajudante1"]
 offset_left = 256.0
 offset_top = 40.0
 offset_right = 335.0
@@ -186,19 +189,19 @@ offset_bottom = 94.0
 text = "Comprar 
 20 points"
 
-[node name="Ajudante2" type="Panel" parent="MenuAjudantes"]
-offset_top = 256.0
+[node name="Ajudante2" type="Panel" parent="ScrollContainer/MenuAjudantes"]
+offset_top = 600.0
 offset_right = 360.0
-offset_bottom = 368.0
+offset_bottom = 712.0
 
-[node name="TituloAjudante2" type="Label" parent="MenuAjudantes/Ajudante2"]
+[node name="TituloAjudante2" type="Label" parent="ScrollContainer/MenuAjudantes/Ajudante2"]
 layout_mode = 2
 offset_left = 112.0
 offset_right = 271.0
 offset_bottom = 29.0
 text = "Irmão Mais Novo"
 
-[node name="QuantidadeAjudante2" type="Label" parent="MenuAjudantes/Ajudante2"]
+[node name="QuantidadeAjudante2" type="Label" parent="ScrollContainer/MenuAjudantes/Ajudante2"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
@@ -209,7 +212,7 @@ text = "QTD
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PontosAjudante2" type="Label" parent="MenuAjudantes/Ajudante2"]
+[node name="PontosAjudante2" type="Label" parent="ScrollContainer/MenuAjudantes/Ajudante2"]
 layout_mode = 0
 offset_left = 136.0
 offset_top = 40.0
@@ -220,7 +223,7 @@ text = "Pontos/S
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ComprarAjudante2" type="Button" parent="MenuAjudantes/Ajudante2"]
+[node name="ComprarAjudante2" type="Button" parent="ScrollContainer/MenuAjudantes/Ajudante2"]
 offset_left = 256.0
 offset_top = 40.0
 offset_right = 335.0
@@ -233,6 +236,6 @@ autostart = true
 
 [connection signal="pressed" from="BotaoClicar" to="." method="_on_botao_clicar_pressed"]
 [connection signal="pressed" from="BotaoUpgradeClick" to="." method="_on_botao_upgrade_click_pressed"]
-[connection signal="pressed" from="MenuAjudantes/Ajudante1/ComprarAjudante1" to="." method="_on_comprar_ajudante_1_pressed"]
-[connection signal="pressed" from="MenuAjudantes/Ajudante2/ComprarAjudante2" to="." method="_on_comprar_ajudante_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/MenuAjudantes/Ajudante1/ComprarAjudante1" to="." method="_on_comprar_ajudante_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/MenuAjudantes/Ajudante2/ComprarAjudante2" to="." method="_on_comprar_ajudante_2_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
