@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2vwyglfsx6tm"]
+
+[ext_resource type="Script" uid="uid://cwkekdq4uty0p" path="res://clicker_game.gd" id="1_2gcxp"]
+
+[node name="Clicker Game" type="Node2D"]
+script = ExtResource("1_2gcxp")
+
+[node name="RotuloPontuacao" type="Label" parent="."]
+offset_left = 472.0
+offset_top = 104.0
+offset_right = 573.0
+offset_bottom = 127.0
+text = "Pontuação: 0"
+
+[node name="BotaoClique" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 184.0
+offset_right = 585.0
+offset_bottom = 215.0
+text = "Clique Aqui (+1)"
+
+[node name="BotaoUpgradeClique" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 240.0
+offset_right = 628.0
+offset_bottom = 271.0
+text = "Clique Upgrade: 10 pontos"
+
+[connection signal="pressed" from="BotaoClique" to="." method="_on_botao_clique_pressed"]
+[connection signal="pressed" from="BotaoUpgradeClique" to="." method="_on_botao_upgrade_clique_pressed"]
