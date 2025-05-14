@@ -7,7 +7,6 @@ pokemonInicialJogador = {
     "atk": 0
 }
 
-
 nomeRival = ""
 
 print("Seja bem vindo ao mundo Pokemon!")
@@ -56,3 +55,5 @@ while pokemonInicialJogador == "":
 
     else:
         print("Escolha um pokemon válido!")
+
+# Determine agora o pokemon do rival. Crie um dicionário para guardar as informações dele e atribua as informações do pokemon, como foi feito com o pokemon do jogador.
