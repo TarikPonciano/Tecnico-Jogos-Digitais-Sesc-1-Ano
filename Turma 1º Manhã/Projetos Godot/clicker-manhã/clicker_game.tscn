@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c06phnyj7i72e"]
 
-[ext_resource type="Script" uid="uid://udsq6krfphxe" path="res://clicker_game.gd" id="1_l1c2j"]
+[ext_resource type="Script" path="res://clicker_game.gd" id="1_l1c2j"]
 
 [sub_resource type="SystemFont" id="SystemFont_l1c2j"]
 font_names = PackedStringArray("Arial")
@@ -179,6 +179,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ComprarAjudante1" type="Button" parent="MenuAjudantes/Ajudante1"]
+layout_mode = 0
 offset_left = 256.0
 offset_top = 40.0
 offset_right = 335.0
@@ -187,6 +188,7 @@ text = "Comprar
 20 points"
 
 [node name="Ajudante2" type="Panel" parent="MenuAjudantes"]
+layout_mode = 0
 offset_top = 256.0
 offset_right = 360.0
 offset_bottom = 368.0
@@ -221,6 +223,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ComprarAjudante2" type="Button" parent="MenuAjudantes/Ajudante2"]
+layout_mode = 0
 offset_left = 256.0
 offset_top = 40.0
 offset_right = 335.0
