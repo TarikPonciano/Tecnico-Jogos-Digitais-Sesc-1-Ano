@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7pcrf0uwqmsh"]
+[gd_scene load_steps=5 format=3 uid="uid://7pcrf0uwqmsh"]
 
 [ext_resource type="Script" uid="uid://cu4rqtyqrbiqj" path="res://clicker_game.gd" id="1_2gcxp"]
+[ext_resource type="Texture2D" uid="uid://bwk3lqcr6x7hi" path="res://126_0_20180212160314.webp" id="2_2gcxp"]
+[ext_resource type="Texture2D" uid="uid://d3hb1qxo10cyg" path="res://images.jpeg" id="3_5kaqi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kaqi"]
+bg_color = Color(1, 0.257035, 0.631785, 1)
 
 [node name="Clicker Game" type="Node2D"]
 script = ExtResource("1_2gcxp")
@@ -30,5 +35,104 @@ offset_bottom = 338.0
 theme_override_font_sizes/font_size = 24
 text = "Upgrade Clique: 10 pontos"
 
+[node name="MenuUpgrades" type="Panel" parent="."]
+offset_left = 896.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 576.0
+
+[node name="TituloUpgrades" type="Label" parent="MenuUpgrades"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 138.0
+offset_bottom = 31.0
+text = "Upgrades"
+
+[node name="CaixaUpgrade1" type="Panel" parent="MenuUpgrades"]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 192.0
+offset_bottom = 168.0
+
+[node name="ComprarUpgrade1" type="Button" parent="MenuUpgrades/CaixaUpgrade1"]
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 189.0
+offset_bottom = 78.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kaqi")
+text = "Comprar
+20 pontos"
+
+[node name="126020180212160314" type="Sprite2D" parent="MenuUpgrades/CaixaUpgrade1"]
+position = Vector2(32, 48)
+scale = Vector2(0.096, 0.096)
+texture = ExtResource("2_2gcxp")
+
+[node name="NomeUpgrade1" type="Label" parent="MenuUpgrades/CaixaUpgrade1"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 185.0
+offset_bottom = 23.0
+text = "Mouse Meio Quebrado"
+
+[node name="GanhoUpgrade1" type="Label" parent="MenuUpgrades/CaixaUpgrade1"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 88.0
+offset_bottom = 55.0
+text = "1/s"
+
+[node name="CaixaUpgrade2" type="Panel" parent="MenuUpgrades"]
+layout_mode = 0
+offset_top = 224.0
+offset_right = 192.0
+offset_bottom = 304.0
+
+[node name="ComprarUpgrade2" type="Button" parent="MenuUpgrades/CaixaUpgrade2"]
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 189.0
+offset_bottom = 78.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kaqi")
+text = "Comprar
+100 pontos"
+
+[node name="126020180212160314" type="Sprite2D" parent="MenuUpgrades/CaixaUpgrade2"]
+position = Vector2(32, 48)
+scale = Vector2(0.252129, 0.196866)
+texture = ExtResource("3_5kaqi")
+
+[node name="NomeUpgrade2" type="Label" parent="MenuUpgrades/CaixaUpgrade2"]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 166.0
+offset_bottom = 23.0
+text = "Irmão Mais Novo"
+
+[node name="GanhoUpgrade2" type="Label" parent="MenuUpgrades/CaixaUpgrade2"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 88.0
+offset_bottom = 55.0
+text = "5/s"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="RotuloPoderPassivo" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 160.0
+offset_right = 642.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0.866667, 0, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "P/S: 0/s"
+
 [connection signal="pressed" from="BotaoClique" to="." method="_on_botao_clique_pressed"]
 [connection signal="pressed" from="BotaoUpgradeClique" to="." method="_on_botao_upgrade_clique_pressed"]
+[connection signal="pressed" from="MenuUpgrades/CaixaUpgrade1/ComprarUpgrade1" to="." method="_on_comprar_upgrade_1_pressed"]
+[connection signal="pressed" from="MenuUpgrades/CaixaUpgrade2/ComprarUpgrade2" to="." method="_on_comprar_upgrade_2_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
