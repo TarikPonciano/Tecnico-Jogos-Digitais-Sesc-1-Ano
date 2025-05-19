@@ -14,7 +14,13 @@ var custo_upgrade_1 = 20
 var qtd_upgrade_2 = 0
 var custo_upgrade_2 = 100
 
+func _process(delta: float) -> void:
 	
+	if Input.is_action_just_pressed("ui_accept"):
+		for i in range(100):
+			_on_botao_clique_pressed()
+
+
 func atualizarInterface():
 	$RotuloPontuacao.text = str("Pontuação: ", pontuacao)
 	$BotaoClique.text = str("Clique Aqui (+",poder_clique,")")
