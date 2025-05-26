@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 func _on_botao_clicar_pressed() -> void:
 	score += power_click
 	atualizar_interface()
-	
 
 
 func _on_botao_upgrade_click_pressed() -> void:
