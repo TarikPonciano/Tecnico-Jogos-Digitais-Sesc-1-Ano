@@ -25,3 +25,6 @@ print(f'''
 # print("AUTOMATIZADO")
 # for chave in cardapio.keys():
 #     print(f"{chave}. {cardapio[chave].mostrarInformacoes()}")
+
+# for i in range(1,len(cardapio)+1):
+#     print(cardapio[i].mostrarInformacoes())
