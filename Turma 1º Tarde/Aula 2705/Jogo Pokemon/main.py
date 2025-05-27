@@ -24,3 +24,4 @@ print(f'''
       DEF: {poke2.defesa}
 ''')
 
+# Criar um sistema de batalha que usa as informações dos dois pokemons e decide o vencedor.
