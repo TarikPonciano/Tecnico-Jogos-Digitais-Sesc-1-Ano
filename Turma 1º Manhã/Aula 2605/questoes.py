@@ -1,0 +1,5 @@
+# Crie uma classe Cachorro, essa classe Cachorro deve conter pelo menos 3 informações e um método "latir" que imprime um latido na tela. Crie um objeto do tipo Cachorro e use o método "latir" para imprimir "AU AU AU" na tela
+
+# Crie uma classe Funcionário, essa classe Funcionário deve conter pelo menos 5 informações e um método "mostrarInformacoes" que imprime de maneira formatada, todas as informações desse funcionario na tela. Faça uma sistema simples de cadastro e crie pelo menos 1 funcionário e exiba suas informações na tela usando o método "mostrarInformacoes".
+
+# Inclua na classe Funcionario a informação salário. Crie também os métodos aumento e reducao. Quando for usado aumento, deve ser informado um número e aumentar o salario original do funcionário, o inverso deve acontecer para o reducao.

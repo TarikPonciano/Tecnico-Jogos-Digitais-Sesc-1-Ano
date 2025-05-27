@@ -16,3 +16,4 @@ HP: {self.hp}
 Atk: {self.atk}
 Defesa: {self.defesa}
 ''')
+    
