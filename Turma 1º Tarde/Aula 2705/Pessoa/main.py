@@ -15,8 +15,5 @@ p2.desativar()
 #       ''')
 p1.mostrarInformacoes()
 p2.mostrarInformacoes()
-p3.mostrarInformacoes()
-p4.mostrarInformacoes()
-p5.mostrarInformacoes()
-p6.mostrarInformacoes()
+
 
