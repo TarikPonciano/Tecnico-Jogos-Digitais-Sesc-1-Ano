@@ -20,4 +20,8 @@ class Pokemon:
 class PokemonFogo(Pokemon):
     def __init__(self, especie, hp, atk, defesa, level):
         super().__init__(especie, hp, atk, defesa, level, "Fogo")
+
+class PokemonAgua(Pokemon):
+    def __init__(self, especie, hp, atk, defesa, level):
+        super().__init__(especie, hp, atk, defesa, level, "Agua")
         
