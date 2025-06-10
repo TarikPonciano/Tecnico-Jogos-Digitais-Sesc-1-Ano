@@ -23,3 +23,11 @@ Quantidade de Pokemons: {len(self.pokemons)}
 
         else:
             print("Você não possui pokemons!")
+
+
+class Jogador(Treinador):
+    def __init__(self, nome, pokemons):
+        super().__init__(nome, pokemons)
+    def capturarPokemon(self, pokemon):
+        self.pokemons.append(pokemon)
+        print(f"Parabéns! Você capturou {pokemon.especie}!")
