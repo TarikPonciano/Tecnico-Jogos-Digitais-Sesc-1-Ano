@@ -31,3 +31,17 @@ class Jogador(Treinador):
     def capturarPokemon(self, pokemon):
         self.pokemons.append(pokemon)
         print(f"Parabéns! Você capturou {pokemon.especie}!")
+    def escolherPokemon(self):
+        if(len(self.pokemons) > 0):
+            
+            print("Lista de Pokemons: ")
+            print()
+            for i, pokemon in enumerate(self.pokemons):
+                print(f"{i+1}. {pokemon.especie}")
+            print()
+            op = int(input("Digite o número do pokemon que deseja usar para a batalha:"))
+
+            return self.pokemons[op-1]
+
+        else:
+            print("Você não possui pokemons!")
