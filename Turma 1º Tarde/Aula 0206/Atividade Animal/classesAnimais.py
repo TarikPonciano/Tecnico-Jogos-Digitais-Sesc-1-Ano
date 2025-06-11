@@ -5,6 +5,10 @@ class Animal:
     
     def comer(self):
         print(f"O {self.nome} está comendo!")
+        
+class Papagaio(Animal):
+    def __init__(self,nome,cor):
+        super().__init__(nome,cor)
 
 class Gato(Animal):
     def __init__(self, nome, cor):
