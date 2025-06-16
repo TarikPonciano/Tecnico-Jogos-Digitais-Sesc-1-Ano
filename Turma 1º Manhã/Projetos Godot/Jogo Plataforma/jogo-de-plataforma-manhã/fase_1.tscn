@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2qptrwj4udgl"]
+
+[ext_resource type="PackedScene" uid="uid://bha6xmssyatcs" path="res://jogador.tscn" id="1_ru54l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urf38"]
+size = Vector2(45, 646.492)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru54l"]
+size = Vector2(45, 650.492)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s2kv"]
+size = Vector2(36.4733, 1161)
+
+[node name="Fase1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(16.5, 324.246)
+shape = SubResource("RectangleShape2D_urf38")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 40.0
+offset_bottom = 647.0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1104, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(18.5, 319)
+shape = SubResource("RectangleShape2D_ru54l")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_right = 40.0
+offset_bottom = 647.0
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(647, 608)
+rotation = 1.56977
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(18.7632, 67.5001)
+shape = SubResource("RectangleShape2D_5s2kv")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+offset_top = -495.0
+offset_right = 40.0
+offset_bottom = 647.0
+
+[node name="Jogador" parent="." instance=ExtResource("1_ru54l")]
+position = Vector2(181, 177)
