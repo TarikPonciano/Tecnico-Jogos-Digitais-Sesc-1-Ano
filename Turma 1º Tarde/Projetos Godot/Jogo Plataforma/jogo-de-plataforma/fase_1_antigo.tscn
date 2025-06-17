@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7rvt4f1yaehw"]
+
+[ext_resource type="PackedScene" uid="uid://c108h21n4dabv" path="res://jogador_antigo.tscn" id="1_1qqt0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl42d"]
+size = Vector2(42, 646)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1o5fu"]
+size = Vector2(41, 645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lggv"]
+size = Vector2(1149, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwwk8"]
+size = Vector2(152, 18)
+
+[node name="Fase 1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 40.0
+offset_bottom = 647.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(20, 323)
+shape = SubResource("RectangleShape2D_dl42d")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1111, -1)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_right = 40.0
+offset_bottom = 649.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(20.5, 324.5)
+shape = SubResource("RectangleShape2D_1o5fu")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(0, 607)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+offset_right = 1151.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(575.5, 20)
+shape = SubResource("RectangleShape2D_5lggv")
+
+[node name="Plataforma2" type="StaticBody2D" parent="."]
+position = Vector2(534, 368)
+
+[node name="ColorRect" type="ColorRect" parent="Plataforma2"]
+offset_right = 149.0
+offset_bottom = 18.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2"]
+position = Vector2(74, 9)
+shape = SubResource("RectangleShape2D_pwwk8")
+
+[node name="Plataforma" type="StaticBody2D" parent="."]
+position = Vector2(273, 459)
+
+[node name="ColorRect" type="ColorRect" parent="Plataforma"]
+offset_right = 149.0
+offset_bottom = 18.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
+position = Vector2(74, 9)
+shape = SubResource("RectangleShape2D_pwwk8")
+
+[node name="Plataforma3" type="StaticBody2D" parent="."]
+position = Vector2(793, 283)
+
+[node name="ColorRect" type="ColorRect" parent="Plataforma3"]
+offset_right = 149.0
+offset_bottom = 18.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma3"]
+position = Vector2(74, 9)
+shape = SubResource("RectangleShape2D_pwwk8")
+
+[node name="Plataforma4" type="StaticBody2D" parent="."]
+position = Vector2(538, 133)
+
+[node name="ColorRect" type="ColorRect" parent="Plataforma4"]
+offset_right = 149.0
+offset_bottom = 18.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma4"]
+position = Vector2(74, 9)
+shape = SubResource("RectangleShape2D_pwwk8")
+
+[node name="Plataforma5" type="StaticBody2D" parent="."]
+position = Vector2(277, 71)
+
+[node name="ColorRect" type="ColorRect" parent="Plataforma5"]
+offset_right = 149.0
+offset_bottom = 18.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma5"]
+position = Vector2(74, 9)
+shape = SubResource("RectangleShape2D_pwwk8")
+
+[node name="Jogador" parent="." instance=ExtResource("1_1qqt0")]
+position = Vector2(139, 324)
