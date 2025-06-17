@@ -1,51 +1,153 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2qptrwj4udgl"]
+[gd_scene load_steps=5 format=4 uid="uid://bsbgvthk8y86t"]
 
-[ext_resource type="PackedScene" uid="uid://bha6xmssyatcs" path="res://jogador.tscn" id="1_ru54l"]
+[ext_resource type="Texture2D" uid="uid://gwnyhs7mht31" path="res://tileset.png" id="1_5s2kv"]
+[ext_resource type="PackedScene" uid="uid://bha6xmssyatcs" path="res://jogador_antigo.tscn" id="1_ru54l"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_urf38"]
-size = Vector2(45, 646.492)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5s2kv"]
+texture = ExtResource("1_5s2kv")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1.25901, -8, -1.25901)
+10:1/0 = 0
+11:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+14:4/0 = 0
+16:4/0 = 0
+20:4/0 = 0
+22:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+14:5/0 = 0
+16:5/0 = 0
+20:5/0 = 0
+22:5/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+9:7/0 = 0
+11:7/0 = 0
+15:7/0 = 0
+17:7/0 = 0
+19:7/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+19:9/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+7:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+2:11/0 = 0
+4:11/0 = 0
+15:11/0 = 0
+17:11/0 = 0
+19:11/0 = 0
+7:13/0 = 0
+9:13/0 = 0
+11:13/0 = 0
+13:13/0 = 0
+7:14/0 = 0
+9:14/0 = 0
+11:14/0 = 0
+15:14/0 = 0
+17:14/0 = 0
+19:14/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+9:15/0 = 0
+2:16/0 = 0
+4:16/0 = 0
+11:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+17:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+11:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+17:18/0 = 0
+19:18/0 = 0
+21:18/0 = 0
+1:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+17:20/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru54l"]
-size = Vector2(45, 650.492)
+[sub_resource type="TileSet" id="TileSet_urf38"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5s2kv")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s2kv"]
-size = Vector2(36.4733, 1161)
+[node name="Fase 1" type="Node2D"]
 
-[node name="Fase1" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(16.5, 324.246)
-shape = SubResource("RectangleShape2D_urf38")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_right = 40.0
-offset_bottom = 647.0
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(1104, 2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(18.5, 319)
-shape = SubResource("RectangleShape2D_ru54l")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
-offset_right = 40.0
-offset_bottom = 647.0
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(647, 608)
-rotation = 1.56977
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(18.7632, 67.5001)
-shape = SubResource("RectangleShape2D_5s2kv")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
-offset_top = -495.0
-offset_right = 40.0
-offset_bottom = 647.0
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAACcAAAABAAEAAAABACcAAAABAAEAAAACACcAAAABAAEAAAADACcAAAABAAEAAAAEACcAAAABAAEAAAAFACcAAAABAAEAAAAGACcAAAABAAEAAAAHACcAAAABAAEAAAAIACcAAAABAAEAAAAJACcAAAABAAEAAAAKACcAAAABAAEAAAALACcAAAABAAEAAAAMACcAAAABAAEAAAANACcAAAABAAEAAAAOACcAAAABAAEAAAAPACcAAAABAAEAAAAQACcAAAABAAEAAAARACcAAAABAAEAAAASACcAAAABAAEAAAATACcAAAABAAEAAAAUACcAAAABAAEAAAAVACcAAAABAAEAAAAWACcAAAABAAEAAAAXACcAAAABAAEAAAAYACcAAAABAAEAAAAZACcAAAABAAEAAAAaACcAAAABAAEAAAAbACcAAAABAAEAAAAcACcAAAABAAEAAAAdACcAAAABAAEAAAAeACcAAAABAAEAAAAfACcAAAABAAEAAAAgACcAAAABAAEAAAAhACcAAAABAAEAAAAiACcAAAABAAEAAAAjACcAAAABAAEAAAAkACcAAAABAAEAAAAlACcAAAABAAEAAAAmACcAAAABAAEAAAAnACcAAAABAAEAAAAoACcAAAABAAEAAAApACcAAAABAAEAAAAqACcAAAABAAEAAAArACcAAAABAAEAAAAsACcAAAABAAEAAAAtACcAAAABAAEAAAAuACcAAAABAAEAAAAvACcAAAABAAEAAAAwACcAAAABAAEAAAAxACcAAAABAAEAAAAyACcAAAABAAEAAAAzACcAAAABAAEAAAA0ACcAAAABAAEAAAA1ACcAAAABAAEAAAA2ACcAAAABAAEAAAA3ACcAAAABAAEAAAA4ACcAAAABAAEAAAA5ACcAAAABAAEAAAA6ACcAAAABAAEAAAA7ACcAAAABAAEAAAA8ACcAAAABAAEAAAA9ACcAAAABAAEAAAA+ACcAAAABAAEAAAA/ACcAAAABAAEAAABAACcAAAABAAEAAABBACcAAAABAAEAAABCACcAAAABAAEAAABDACcAAAABAAEAAABEACcAAAABAAEAAABFACcAAAABAAEAAABGACcAAAABAAEAAABHACcAAAABAAEAAAAbACMAAAAFAAEAAAAcACMAAAAFAAEAAAAdACMAAAAFAAEAAAAeACMAAAAFAAEAAAAfACMAAAAFAAEAAAAgACMAAAAFAAEAAAAhACMAAAAFAAEAAAAiACMAAAAFAAEAAAAjACEAAAAFAAEAAAAkACEAAAAFAAEAAAAlACEAAAAFAAEAAAAmACEAAAAFAAEAAAAnACEAAAAFAAEAAAAoACEAAAAFAAEAAAApACEAAAAFAAEAAAAqACEAAAAFAAEAAAArACEAAAAFAAEAAAArAB4AAAAFAAEAAAAsAB4AAAAFAAEAAAAtAB4AAAAFAAEAAAAuAB4AAAAFAAEAAAAuAB0AAAAFAAEAAAAvAB0AAAAFAAEAAAAwAB0AAAAFAAEAAAAxAB0AAAAFAAEAAAAxAB4AAAAFAAEAAAAyAB4AAAAFAAEAAAAyABsAAAAFAAEAAAAzABsAAAAFAAEAAAA0ABsAAAAFAAEAAAA1ABsAAAAFAAEAAAA2ABsAAAAFAAEAAAA3ABsAAAAFAAEAAAA2ABkAAAAFAAEAAAA3ABkAAAAFAAEAAAA4ABgAAAAFAAEAAAA5ABgAAAAFAAEAAAA6ABgAAAAFAAEAAAA7ABgAAAAFAAEAAAA7ABQAAAAFAAEAAAA7ABUAAAAFAAEAAAA8ABUAAAAFAAEAAAA9ABUAAAAFAAEAAAA+ABUAAAAFAAEAAAA/ABUAAAAFAAEAAAA1ABAAAAAFAAEAAAA1ABEAAAAFAAEAAAA0ABEAAAAFAAEAAAAzABEAAAAFAAEAAAAyABEAAAAFAAEAAAAxABEAAAAFAAEAAAAsABAAAAAFAAEAAAArABAAAAAFAAEAAAAqABAAAAAFAAEAAAApABAAAAAFAAEAAAAoABAAAAAFAAEAAAAnABAAAAAFAAEAAAAmABAAAAAFAAEAAAAhAA0AAAAFAAEAAAAgAA0AAAAFAAEAAAAfAA0AAAAFAAEAAAAeAA0AAAAFAAEAAAAdAA0AAAAFAAEAAAAcAA0AAAAFAAEAAAAbAA0AAAAFAAEAAAAaAA0AAAAFAAEAAAAYAAkAAAAFAAEAAAAXAAkAAAAFAAEAAAAWAAkAAAAFAAEAAAAVAAkAAAAFAAEAAAAUAAkAAAAFAAEAAAATAAkAAAAFAAEAAAASAAkAAAAFAAEAAAARAAUAAAAFAAEAAAAQAAUAAAAFAAEAAAAPAAUAAAAFAAEAAAAOAAUAAAAFAAEAAAANAAUAAAAFAAEAAAAMAAUAAAAFAAEAAAA=")
+tile_set = SubResource("TileSet_urf38")
 
 [node name="Jogador" parent="." instance=ExtResource("1_ru54l")]
-position = Vector2(181, 177)
+position = Vector2(114, 427)
