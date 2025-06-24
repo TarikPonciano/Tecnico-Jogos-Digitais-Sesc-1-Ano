@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://55veb0n2gfli"]
+[gd_scene load_steps=7 format=4 uid="uid://55veb0n2gfli"]
 
 [ext_resource type="PackedScene" uid="uid://umr8y6olemco" path="res://jogador.tscn" id="1_1qqt0"]
 [ext_resource type="Texture2D" uid="uid://2bhbbxo03hbx" path="res://tileset.png" id="1_d70ig"]
+[ext_resource type="PackedScene" uid="uid://d3i6c2vmx7gtc" path="res://inimigo_sapo_1.tscn" id="3_urf38"]
+[ext_resource type="PackedScene" uid="uid://bj627kgs75fhm" path="res://inimigo_sapo_2.tscn" id="4_ny45v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ak2rf"]
 texture = ExtResource("1_d70ig")
@@ -150,3 +152,9 @@ tile_set = SubResource("TileSet_e3u6x")
 
 [node name="Jogador" parent="." instance=ExtResource("1_1qqt0")]
 position = Vector2(154, 42)
+
+[node name="Inimigo Sapo 1" parent="." instance=ExtResource("3_urf38")]
+position = Vector2(937, 524)
+
+[node name="Inimigo Sapo 2" parent="." instance=ExtResource("4_ny45v")]
+position = Vector2(648, 574)

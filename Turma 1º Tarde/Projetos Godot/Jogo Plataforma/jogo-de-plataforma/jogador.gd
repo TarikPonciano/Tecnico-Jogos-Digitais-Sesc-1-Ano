@@ -29,7 +29,6 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("fall")
 	elif velocity.x != 0:
 		$AnimatedSprite2D.play("correr")
-		
 	else:
 		$AnimatedSprite2D.play("idle")
 	
