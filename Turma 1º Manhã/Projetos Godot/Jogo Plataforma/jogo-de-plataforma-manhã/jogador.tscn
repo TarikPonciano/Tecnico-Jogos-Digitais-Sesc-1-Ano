@@ -212,3 +212,8 @@ debug_color = Color(0.959687, 0.171554, 0.276297, 0.42)
 position = Vector2(-1.25, 14.25)
 shape = SubResource("RectangleShape2D_q2130")
 debug_color = Color(0.932111, 0.897429, 0, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_bottom = 640
