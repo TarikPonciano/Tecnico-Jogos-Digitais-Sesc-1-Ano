@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://lqviq1nwscd0"]
+[gd_scene load_steps=7 format=4 uid="uid://lqviq1nwscd0"]
 
 [ext_resource type="Texture2D" uid="uid://gwnyhs7mht31" path="res://tileset.png" id="1_ugssl"]
 [ext_resource type="PackedScene" uid="uid://i7i64248jo61" path="res://jogador.tscn" id="2_dqovl"]
+[ext_resource type="PackedScene" uid="uid://byo8mak4thtbq" path="res://inimigo_sapo.tscn" id="3_xe686"]
+[ext_resource type="PackedScene" uid="uid://dyy6ey2e1fuv2" path="res://inimigo_sapo_2.tscn" id="4_47a2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dj5y6"]
 texture = ExtResource("1_ugssl")
@@ -155,4 +157,10 @@ tile_map_data = PackedByteArray("AAAAACcAAAAHAAEAAAAAACYAAAAHAAEAAAAAACUAAAAHAAE
 tile_set = SubResource("TileSet_7culj")
 
 [node name="Jogador" parent="." instance=ExtResource("2_dqovl")]
-position = Vector2(55, 584)
+position = Vector2(96, 564)
+
+[node name="Inimigo Sapo" parent="." instance=ExtResource("3_xe686")]
+position = Vector2(753, 327)
+
+[node name="Inimigo Sapo 2" parent="." instance=ExtResource("4_47a2j")]
+position = Vector2(597, 552)

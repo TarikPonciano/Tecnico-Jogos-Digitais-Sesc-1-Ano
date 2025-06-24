@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://dyy6ey2e1fuv2"]
+
+[ext_resource type="Script" uid="uid://wxv3j83ybmll" path="res://inimigo_sapo_2.gd" id="1_hud04"]
+[ext_resource type="Texture2D" uid="uid://bju05jty111dg" path="res://frog-idle.png" id="1_mcfr1"]
+[ext_resource type="Texture2D" uid="uid://dydopciwco5ox" path="res://frog-jump.png" id="2_hud04"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq0jc"]
+atlas = ExtResource("1_mcfr1")
+region = Rect2(0, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqry2"]
+atlas = ExtResource("1_mcfr1")
+region = Rect2(35, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c6v8"]
+atlas = ExtResource("1_mcfr1")
+region = Rect2(70, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6bef"]
+atlas = ExtResource("1_mcfr1")
+region = Rect2(105, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dxa6"]
+atlas = ExtResource("2_hud04")
+region = Rect2(0, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iugme"]
+atlas = ExtResource("2_hud04")
+region = Rect2(35, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jggjx"]
+atlas = ExtResource("2_hud04")
+region = Rect2(70, 0, 35, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bi58v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq0jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqry2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c6v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6bef")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dxa6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iugme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jggjx")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brwji"]
+size = Vector2(23, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hud04"]
+radius = 105.543
+
+[node name="Inimigo Sapo 2" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_hud04")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bi58v")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 3.5)
+shape = SubResource("RectangleShape2D_brwji")
+
+[node name="Detectar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detectar"]
+shape = SubResource("CircleShape2D_hud04")
+
+[connection signal="body_entered" from="Detectar" to="." method="_on_detectar_body_entered"]
+[connection signal="body_exited" from="Detectar" to="." method="_on_detectar_body_exited"]
