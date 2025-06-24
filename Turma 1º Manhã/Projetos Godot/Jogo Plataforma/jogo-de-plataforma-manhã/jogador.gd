@@ -3,9 +3,14 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-
+var morrendo = false
 
 func _physics_process(delta: float) -> void:
+	
+	if morrendo:
+		return
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -37,6 +42,15 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
 		
-		
 
 	move_and_slide()
+	
+func morrer():
+	#Para desligar as colisões
+	#$"Killzone Jogador".queue_free()
+	#$"Hitbox Jogador".queue_free()
+	#$CollisionShape2D.queue_free()
+	morrendo = true
+	$AnimatedSprite2D.play("death")
+	await $AnimatedSprite2D.animation_finished
+	get_tree().reload_current_scene()
