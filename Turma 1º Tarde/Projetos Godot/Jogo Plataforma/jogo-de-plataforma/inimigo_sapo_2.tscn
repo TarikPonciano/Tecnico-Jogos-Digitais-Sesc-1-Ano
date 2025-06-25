@@ -1,8 +1,25 @@
-[gd_scene load_steps=14 format=3 uid="uid://bj627kgs75fhm"]
+[gd_scene load_steps=20 format=3 uid="uid://bj627kgs75fhm"]
 
-[ext_resource type="Script" uid="uid://daqgov5d63mqf" path="res://inimigo_sapo_2.gd" id="1_hud04"]
+[ext_resource type="Script" path="res://inimigo_sapo_2.gd" id="1_hud04"]
 [ext_resource type="Texture2D" uid="uid://c6autfh08epye" path="res://frog-idle.png" id="1_mcfr1"]
+[ext_resource type="Texture2D" uid="uid://w3v82d18rbpl" path="res://spritesheet-death.png" id="2_hqhvy"]
 [ext_resource type="Texture2D" uid="uid://dhotruok1hvbe" path="res://frog-jump.png" id="2_hud04"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uvpq"]
+atlas = ExtResource("2_hqhvy")
+region = Rect2(0, 0, 28, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg3ox"]
+atlas = ExtResource("2_hqhvy")
+region = Rect2(28, 0, 28, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8ae7"]
+atlas = ExtResource("2_hqhvy")
+region = Rect2(56, 0, 28, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqk8"]
+atlas = ExtResource("2_hqhvy")
+region = Rect2(84, 0, 28, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bi58v"]
 atlas = ExtResource("1_mcfr1")
@@ -34,6 +51,23 @@ region = Rect2(70, 0, 35, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m8aos"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uvpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg3ox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8ae7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqk8")
+}],
+"loop": false,
+"name": &"death",
+"speed": 3.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bi58v")
@@ -72,12 +106,16 @@ size = Vector2(20, 11)
 [sub_resource type="CircleShape2D" id="CircleShape2D_hud04"]
 radius = 129.016
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84jcn"]
+size = Vector2(25, 19.5)
+
 [node name="Inimigo Sapo 2" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_hud04")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m8aos")
-animation = &"jump"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 5.5)
@@ -88,5 +126,13 @@ shape = SubResource("RectangleShape2D_uclto")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detectar"]
 shape = SubResource("CircleShape2D_hud04")
 
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-0.5, 1.25)
+shape = SubResource("RectangleShape2D_84jcn")
+debug_color = Color(0.979489, 0, 0.387617, 0.42)
+
 [connection signal="body_entered" from="Detectar" to="." method="_on_detectar_body_entered"]
 [connection signal="body_exited" from="Detectar" to="." method="_on_detectar_body_exited"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
