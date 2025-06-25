@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dyy6ey2e1fuv2"]
 
-[ext_resource type="Script" uid="uid://wxv3j83ybmll" path="res://inimigo_sapo_2.gd" id="1_hud04"]
+[ext_resource type="Script" path="res://inimigo_sapo_2.gd" id="1_hud04"]
 [ext_resource type="Texture2D" uid="uid://bju05jty111dg" path="res://frog-idle.png" id="1_mcfr1"]
 [ext_resource type="Texture2D" uid="uid://c6qgtc5wfq5ng" path="res://spritesheet-death.png" id="2_bi58v"]
 [ext_resource type="Texture2D" uid="uid://dydopciwco5ox" path="res://frog-jump.png" id="2_hud04"]

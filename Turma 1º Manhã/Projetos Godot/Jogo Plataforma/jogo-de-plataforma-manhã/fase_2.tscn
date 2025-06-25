@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://lqviq1nwscd0"]
+[gd_scene load_steps=10 format=4 uid="uid://lqviq1nwscd0"]
 
+[ext_resource type="Script" path="res://fase_2.gd" id="1_tfxp1"]
 [ext_resource type="Texture2D" uid="uid://gwnyhs7mht31" path="res://tileset.png" id="1_ugssl"]
 [ext_resource type="PackedScene" uid="uid://i7i64248jo61" path="res://jogador.tscn" id="2_dqovl"]
 [ext_resource type="PackedScene" uid="uid://dyy6ey2e1fuv2" path="res://inimigo_sapo_2.tscn" id="4_47a2j"]
+[ext_resource type="PackedScene" uid="uid://uesitrcq3kku" path="res://cereja.tscn" id="4_jktva"]
+[ext_resource type="Texture2D" uid="uid://drkvbmtcgvxoa" path="res://cherry.png" id="5_1knpv"]
+[ext_resource type="Script" path="res://label.gd" id="6_ihcm6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dj5y6"]
 texture = ExtResource("1_ugssl")
@@ -150,6 +154,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dj5y6")
 
 [node name="Fase 2" type="Node2D"]
+script = ExtResource("1_tfxp1")
 metadata/_edit_horizontal_guides_ = [641.0]
 metadata/_edit_vertical_guides_ = [-4.0]
 
@@ -162,3 +167,36 @@ position = Vector2(96, 564)
 
 [node name="Inimigo Sapo 2" parent="." instance=ExtResource("4_47a2j")]
 position = Vector2(597, 552)
+
+[node name="Cereja" parent="." instance=ExtResource("4_jktva")]
+position = Vector2(179, 598)
+
+[node name="Cereja2" parent="." instance=ExtResource("4_jktva")]
+position = Vector2(237, 602)
+
+[node name="Cereja3" parent="." instance=ExtResource("4_jktva")]
+position = Vector2(296, 593)
+
+[node name="Cereja4" parent="." instance=ExtResource("4_jktva")]
+position = Vector2(388, 559)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Cherry" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(68, 41)
+scale = Vector2(2, 2)
+texture = ExtResource("5_1knpv")
+region_enabled = true
+region_rect = Rect2(40.136, 0, 23, 19.4)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 98.0
+offset_top = 20.0
+offset_right = 138.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 32
+text = "0"
+script = ExtResource("6_ihcm6")
+
+[node name="Cereja5" parent="." instance=ExtResource("4_jktva")]
+position = Vector2(561, 549)
