@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp888ydonvedd"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_admp6"]
+[ext_resource type="FontFile" uid="uid://buurmq704erfl" path="res://Daydream.ttf" id="2_gt40c"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_admp6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 88.0
+offset_right = 1394.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("2_gt40c")
+theme_override_font_sizes/font_size = 48
+text = "Platformer Raposinha"
+
+[node name="Iniciar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 280.0
+offset_right = 669.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("2_gt40c")
+theme_override_font_sizes/font_size = 24
+text = "Iniciar"
+
+[node name="Sair" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 392.0
+offset_right = 648.0
+offset_bottom = 456.0
+theme_override_fonts/font = ExtResource("2_gt40c")
+theme_override_font_sizes/font_size = 24
+text = "Sair
+"
+
+[connection signal="pressed" from="Panel/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Panel/Sair" to="." method="_on_sair_pressed"]
