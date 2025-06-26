@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvkhfxo5ntoh7"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_4d03a"]
+[ext_resource type="FontFile" uid="uid://bwqjya1hbbty0" path="res://Daydream.ttf" id="1_hmae5"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4d03a")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 72.0
+offset_right = 952.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("1_hmae5")
+theme_override_font_sizes/font_size = 48
+text = "Platformer Foxy"
+
+[node name="Iniciar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 248.0
+offset_right = 704.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("1_hmae5")
+theme_override_font_sizes/font_size = 32
+text = "Iniciar"
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 408.0
+offset_right = 704.0
+offset_bottom = 484.0
+theme_override_fonts/font = ExtResource("1_hmae5")
+theme_override_font_sizes/font_size = 32
+text = "Sair"
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

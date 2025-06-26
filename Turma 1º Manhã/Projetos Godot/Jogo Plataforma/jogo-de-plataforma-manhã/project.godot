@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jogo de Plataforma Manhã"
-run/main_scene="uid://b2qptrwj4udgl"
+run/main_scene="res://Intro.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
